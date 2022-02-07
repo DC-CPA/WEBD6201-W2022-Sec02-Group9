@@ -1,0 +1,14 @@
+{
+  "name": "WEBD6201-W2022-Sec02-Group09",
+  "version": "1.0.0",
+  "description": "Repo for Group09 labs for WEBD6201-W2022",
+  "main": "index.js",
+  "author": "Katherine Bellman and Russell Waring",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.11.2",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  }
+}
