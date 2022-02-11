@@ -10,11 +10,14 @@
 // AKA -- Anonymous Self-Executing Function
 (function()
 {
+    
 
     function DisplayHomePage()
     {
         // Name of button and id are same... this is a naming convention. Button is actually an 'html element'
         console.log("Home Page");
+
+
         let AboutUsButton = document.getElementById("AboutUsButton");
         AboutUsButton.addEventListener("click", function()
         {
@@ -48,6 +51,9 @@
     {
         console.log("App Started!");
 
+         //pop in the favicon
+        AddToHead();
+
         switch(document.title)
         {
             case "Home":
@@ -66,6 +72,14 @@
                 DisplayContactPage();
                 break;
         }        
+    }
+
+    // Creates, sets  favicon to 
+    function AddToHead()
+    {
+        console.log("favicon appended");
+        // website favicon attribute setting
+        $('head').append('<link rel="shortcut icon" type="image/svg" href="../Images/site_icon_fas_user-secret.svg">');
     }
 
     // Event listener for hooking into the Start function
