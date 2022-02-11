@@ -1,1 +1,9 @@
 /* Custom CSS file */
+body{
+    background-color: #95adbe;
+}
+
+.navbar{
+    background-color: #503a65;
+    color: #e0f0ea;
+}

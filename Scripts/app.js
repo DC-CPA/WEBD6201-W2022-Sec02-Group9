@@ -54,6 +54,7 @@
 
          //pop in the favicon
         AddToHead();
+        changeNav();
 
         switch(document.title)
         {
@@ -81,6 +82,15 @@
         console.log("favicon appended");
         // website favicon attribute setting
         $('head').append('<link rel="shortcut icon" type="image/svg" href="../Assets/site_icon_fas_user-secret.svg">');
+    }
+
+    function changeNav()
+    {
+        console.log('nav: "Products" changed to "Projects"');
+        let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
+        let insertText  = document.createTextNode('<a class="nav-link" href="./projects.html"><i class="fas fa-th"></i> Project </a>');
+        navBarTarget.innerHTML = insertText.textContent;
+        console.log(navBarTarget);
     }
 
     // Event listener for hooking into the Start function
