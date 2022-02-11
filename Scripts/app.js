@@ -18,6 +18,7 @@
         console.log("Home Page");
 
 
+
         let AboutUsButton = document.getElementById("AboutUsButton");
         AboutUsButton.addEventListener("click", function()
         {
@@ -79,7 +80,7 @@
     {
         console.log("favicon appended");
         // website favicon attribute setting
-        $('head').append('<link rel="shortcut icon" type="image/svg" href="../Images/site_icon_fas_user-secret.svg">');
+        $('head').append('<link rel="shortcut icon" type="image/svg" href="../Assets/site_icon_fas_user-secret.svg">');
     }
 
     // Event listener for hooking into the Start function
