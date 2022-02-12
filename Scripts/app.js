@@ -26,7 +26,6 @@
             location.href = "about.html";
         });
 
-        let HeroParagraph = '<p id="HeroParagraph" class="mt-3">'+ TextHero +'</p>';
         let CodeHeroImage = '<img id="CodeHeroImage" class="img-fluid" src="../Assets/hero_image_code.png"/>'
 
 
@@ -38,10 +37,19 @@
         let HeroParagraph = document.createElement('p');
         let HeroArticleContainer = document.createElement("article");
 
-
         //Page Hero image
         let HeroImage = document.createElement("img");
 
+        //setting attributes of created elements
+        HeroParagraph.setAttribute("id","HeroParagraph");
+        HeroParagraph.setAttribute("class", "mt-3");
+        HeroParagraph.textContent = TextHero;
+
+        HeroArticleContainer.setAttribute("class", "container");
+        
+        HeroArticleContainer.innerHTML = HeroParagraph;
+        MainDivContainer.appendChild(HeroArticleContainer);
+        DocumentBodyInsert.a
 
 
 
