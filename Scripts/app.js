@@ -202,7 +202,7 @@
             case "Home":
                 DisplayHomePage();
                 break;
-            case "Projects":
+            case "Products":
                 DisplayProjectsPage();
                 break;
             case "Services":
