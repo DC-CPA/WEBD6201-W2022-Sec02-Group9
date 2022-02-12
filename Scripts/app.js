@@ -19,40 +19,42 @@
         
         
         //Displayed content
-        let TextHero = 'As  students of Durham College\'s Computer Programming and Analysis Program. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you.\n';
         let AboutUsButton = document.getElementById("AboutUsButton");
         AboutUsButton.addEventListener("click", function()
         {
             location.href = "about.html";
         });
-
+        
+        let HeroParagraph = '<p id="HeroParagraph" class="mt-3">'+ TextHero +'</p>';
+        let TextHero = 'As  students of Durham College\'s Computer Programming and Analysis Program. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you.\n';
         let CodeHeroImage = '<img id="CodeHeroImage" class="img-fluid" src="../Assets/hero_image_code.png"/>'
 
 
         //Get access to div container for insertion
-        let DocumentBodyInsert = document.body;
+        //let DocumentBodyInsert = document.body;
         let MainDivContainer = document.getElementsByTagName("main")[0];
+        MainDivContainer.setAttribute("id","MainDivContainer");
+
+
         
         //Create container for Hero content
-        let HeroParagraph = document.createElement('p');
-        let HeroArticleContainer = document.createElement("article");
+        //let HeroParagraph = document.createElement('p');
+        //let HeroArticleContainer = document.createElement("article");
 
         //Page Hero image
         let HeroImage = document.createElement("img");
+        HeroImage.innerHTML = CodeHeroImage;
+
 
         //setting attributes of created elements
-        HeroParagraph.setAttribute("id","HeroParagraph");
-        HeroParagraph.setAttribute("class", "mt-3");
-        HeroParagraph.textContent = TextHero;
+        //HeroParagraph.setAttribute("id","HeroParagraph");
+        //HeroParagraph.setAttribute("class", "mt-3");
+        HeroParagraph.innerHTML = TextHero;
 
-        HeroArticleContainer.setAttribute("class", "container");
-        
-        HeroArticleContainer.innerHTML = HeroParagraph;
-        MainDivContainer.appendChild(HeroArticleContainer);
-        DocumentBodyInsert.a
+        MainDivContainer.appendChild(HeroImage);
+        MainDivContainer.appendChild(HeroParagraph);
 
-
-
+        //DocumentBodyInsert.appendChild(MainDivContainer);
 
     }
 
@@ -60,8 +62,44 @@
     {
         console.log("Projects Page");
 
+        let Header_Kat_Services = "Katherine Specializes in: ";    
+        let Kat_Services = [
+            {
+                Service: "Web Design",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "Divi Wordpress Development",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "UI Design",
+                pic: "",
+                text:"",
+            },
+        ];
 
 
+          let Header_Russel_Services = "Russel Specializes in: ";    
+        let Russel_Services = [
+            {
+                Service: "Web Design",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "Divi Wordpress Development",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "UI Design",
+                pic: "",
+                text:"",
+            },
+        ];
     }
 
     function DisplayServicesPage()
