@@ -1,5 +1,3 @@
-//IIFE -- Imediately invoked function expression
-// aka - anonymously self executing function
 /** app.js
  *  @authors    Katherine Bellman, Russell Waring
  *  @since      2022.02.07
@@ -162,6 +160,8 @@
         AddToHead();
         //Change the navagation text
         changeNav();
+        // Insert human resources tab in nav bar between 'About Us' and 'Contact Us'
+        insertHumanResources();
 
         switch(document.title)
         {
@@ -199,6 +199,22 @@
         navBarTarget.innerHTML = insertText.textContent;
         console.log(navBarTarget);
     }
+
+    function insertHumanResources()
+    {
+        let navBarTarget = document.body.getElementsByClassName("nav-item")[4];
+        let navBarAppend = document.createElement("li");
+        navBarAppend.setAttribute("class", "nav-item");
+
+        let humanResources = `
+            <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-user-tie"></i> Human Resources</a>
+            </li> 
+        `;
+        navBarAppend.innerHTML = humanResources;
+        navBarTarget.before(navBarAppend);
+        console.log(navBarTarget);
+    };
 
     // Event listener for hooking into the Start function
     window.addEventListener("load", Start); 
