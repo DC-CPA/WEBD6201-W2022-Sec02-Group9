@@ -92,6 +92,26 @@ form{
     padding-top: 10px;
 }
 
+.service{
+    color: #422e55;
+    font-size: 3em;
+}
+.service-group{
+    background-size: 215%;
+}
+.service-icon{
+    color:  #e0f0eaa4;
+    text-shadow: .55rem .25rem .50rem #422e556b;
+    font-size: 1.25em;
+}
+.service-note{
+    margin-top: .5rem;
+    background-color: #e0f0ea31;
+    background-size: 25% 25%;
+    box-shadow: .55rem .25rem .50rem hsla(271, 30%, 26%, 0.165);
+    background-blend-mode: overlay;
+}
+
 /* Image Styling */
 
 #CodeHeroImage {
