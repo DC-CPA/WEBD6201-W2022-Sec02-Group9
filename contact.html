@@ -41,25 +41,31 @@
 </nav>
   </header>
 
-    <main class="container">
+    <main class="container justify-content-center  align-items-center">
       <h1 class="mb-5  text-center ">Contact Us</h1>
-      <form action="" class="form ">
-          <div class="mb-3">
-              <input type="text" name="" id="input_name">
+      <div class="col align-content-center justify-content-center flex-column">
+        <form action="" class="form form-group ">
+          <div class="mb-3 form-group row-cols-4">
+            <label for="input_name" class="sr-only form-control-sm  col-sm-11 col-form-label-sm">Name:</label>
+              <input type="text" class=" col-sm-11 form-control " name="" id="input_name" placeholder="Name:">
           </div>
-            <div class="mb-3">
-                <input type="tel" name="" id="input_number">
+            <div class="mb-3 form-group row-cols-4">
+              <label for="input_number" class="sr-only form-control-sm  col-sm-11 col-form-label-sm">Phone Number:</label>
+                <input type="tel" class="col-sm-11 form-control" name="" id="input_number" placeholder="Phone Number:">
+              </div>
+            <div class="mb-3 form-group row-cols-4">
+              <label for="input_email" class="sr-only form-control-sm  col-sm-11 col-form-label-sm">E-mail Address:</label>
+                <input type="email" class="col-sm-11 form-control" name="" id="input_email" placeholder="E-mail Address:">
             </div>
-            <div class="mb-3">
-                <input type="email" name="" id="input_email">
+            <div class="mb-3 form-group row-cols-4">
+              <label for="input_message" class="sr-only form-control-sm  col-sm-11 col-form-label-sm">Comment:</label>
+                <input type="text" class="col-sm-11 form-control" name="" id="input_message" placeholder="Comment:">
             </div>
-            <div class="mb-3">
-                <input type="text" name="" id="input_message">
+            <div class="mb-3 form-group row-cols-4">
+              <input type="reset" value="Clear" id="input_clear" class="btn"><input type="submit" value="Submit" id="input_submit" class="btn">
             </div>
-            <div class="mb-3">
-                <input type="reset" value="Clear" id="input_clear"><input type="submit" value="Submit" id="input_submit">
-            </div>
-      </form>
+          </form>
+        </div>
     </main>
  <!--SCRIPTING SECTION-->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>

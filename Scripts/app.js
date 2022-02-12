@@ -1,5 +1,5 @@
 /** app.js
- *  @authors    Katherine Bellman, Russellll Waring
+ *  @authors    Katherine Bellman, Russelll Waring
  *  @since      2022.02.07
  *  @version    1
  *              JavaScript file for injecting behaviour into our website.
@@ -36,7 +36,7 @@
         MainDivHeading.setAttribute("id", "MainDivHeading;")
         HeroParagraph.setAttribute("id", "HeroParagraph");
         HeroParagraph.setAttribute("class", "mt-3");
-        HeroParagraph.innerHTML = `This is the landing page for a website in development as part of a ongoing for the course WEBD6201.\nThe creators of this site include Katherine Bellman and Russelll Waring, who both both enrolled in\n the Computer Programming and Analysis Program at Durham College. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you!\n`;
+        HeroParagraph.innerHTML = `This is the landing page for a website in development as part of a ongoing for the course WEBD6201.\nThe creators of this site include Katherine Bellman and Russell Waring, who both both enrolled in\n the Computer Programming and Analysis Program at Durham College. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you!\n`;
         HeroImage.setAttribute("id", "CodeHeroImage");
         HeroImage.setAttribute("src", "../Assets/hero_image_code.png");
 
@@ -53,7 +53,6 @@
     {
         console.log("Projects Page");
 
-        // Step 1 - entry ref
         let MainDivHeading = document.getElementsByTagName("h1")[0];
         MainDivHeading.textContent = "Our Projects";
         //console.log(MainDivHeading);
@@ -104,26 +103,6 @@
                 text:"",
             },
         ];
-
-        let Header_Russell_Services = "Russell Specializes in: ";    
-        let Russell_Services = [
-            {
-                Service: "Web Design",
-                pic: "",
-                text:"",
-            },
-            {
-                Service: "Divi Wordpress Development",
-                pic: "",
-                text:"",
-            },
-            {
-                Service: "UI Design",
-                pic: "",
-                text:"",
-            },
-        ];
-
     }
 
     function DisplayServicesPage()
@@ -150,8 +129,8 @@
         ];
 
 
-        let Header_Russell_Services = "Russell Specializes in: ";    
-        let Russell_Services = [
+        let Header_Russel_Services = "Russel Specializes in: ";    
+        let Russel_Services = [
             {
                 Service: "Web Design",
                 pic: "",
@@ -201,9 +180,8 @@
         let contactMessage = document.body.getElementById("input_message");
         let buttonSubmit = document.body.getElementById("input_submit");
         let buttonClear = document.body.getElementById("input_clear");
-
-
         
+
     }
 
 
@@ -224,7 +202,7 @@
             case "Home":
                 DisplayHomePage();
                 break;
-            case "Products":
+            case "Projects":
                 DisplayProjectsPage();
                 break;
             case "Services":
