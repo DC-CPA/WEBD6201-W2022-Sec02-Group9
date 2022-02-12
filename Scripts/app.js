@@ -1,5 +1,3 @@
-//IIFE -- Imediately invoked function expression
-// aka - anonymously self executing function
 /** app.js
  *  @authors    Katherine Bellman, Russell Waring
  *  @since      2022.02.07
