@@ -1,9 +1,38 @@
 /* Custom CSS file */
+
+/* Main Tag Styling */
 body{
     background-color: #95adbe;
 }
 
+a:hover,a:visited{
+    color: #fbfffe;
+}
+a:link{
+    color:#f0ede0
+}
+
+button:hover{
+    background-color: #a89da5 !important;
+    border-color: #503a65 !important;
+    color: #e0f0ea !important;
+}
+
+
+/* Customized Bootstrap Classes */
 .navbar{
     background-color: #503a65;
     color: #e0f0ea;
 }
+
+.nav-link{
+    color: #503a65 !important;
+}
+
+.btn , .btn-primary{
+    background-color: #503a65;
+    color: #fff;
+    border-color: #95adbe;
+}
+
+/* Page Elements Styling */

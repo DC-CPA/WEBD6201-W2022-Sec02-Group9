@@ -16,19 +16,44 @@
     {
         // Name of button and id are same... this is a naming convention. Button is actually an 'html element'
         console.log("Home Page");
-
-
-
+        
+        
+        //Displayed content
+        let TextHero = 'As  students of Durham College\'s Computer Programming and Analysis Program. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you.\n';
         let AboutUsButton = document.getElementById("AboutUsButton");
         AboutUsButton.addEventListener("click", function()
         {
             location.href = "about.html";
         });
+
+        let HeroParagraph = '<p id="HeroParagraph" class="mt-3">'+ TextHero +'</p>';
+        let CodeHeroImage = '<img id="CodeHeroImage" class="img-fluid" src="../Assets/hero_image_code.png"/>'
+
+
+        //Get access to div container for insertion
+        let DocumentBodyInsert = document.body;
+        let MainDivContainer = document.getElementsByTagName("main")[0];
+        
+        //Create container for Hero content
+        let HeroParagraph = document.createElement('p');
+        let HeroArticleContainer = document.createElement("article");
+
+
+        //Page Hero image
+        let HeroImage = document.createElement("img");
+
+
+
+
+
     }
 
-    function DisplayProductsPage()
+    function DisplayProjectsPage()
     {
-        console.log("Products Page");
+        console.log("Projects Page");
+
+
+
     }
 
     function DisplayServicesPage()
@@ -54,6 +79,7 @@
 
          //pop in the favicon
         AddToHead();
+        //Change the navagation text
         changeNav();
 
         switch(document.title)
@@ -61,8 +87,8 @@
             case "Home":
                 DisplayHomePage();
                 break;
-            case "Products":
-                DisplayProductsPage();
+            case "Projects":
+                DisplayProjectsPage();
                 break;
             case "Services":
                 DisplayServicesPage();
@@ -88,7 +114,7 @@
     {
         console.log('nav: "Products" changed to "Projects"');
         let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
-        let insertText  = document.createTextNode('<a class="nav-link" href="./projects.html"><i class="fas fa-th"></i> Project </a>');
+        let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Project </a>');
         navBarTarget.innerHTML = insertText.textContent;
         console.log(navBarTarget);
     }
