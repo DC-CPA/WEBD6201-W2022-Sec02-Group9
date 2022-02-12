@@ -55,7 +55,14 @@ button:hover{
 }
 
 /* Page Elements Styling */
-
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.grid-item {
+    border: 1px solid;
+    text-align: center;
+}
 
 /* Image Styling */
 

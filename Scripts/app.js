@@ -1,5 +1,5 @@
 /** app.js
- *  @authors    Katherine Bellman, Russelll Waring
+ *  @authors    Katherine Bellman, Russellll Waring
  *  @since      2022.02.07
  *  @version    1
  *              JavaScript file for injecting behaviour into our website.
@@ -36,7 +36,7 @@
         MainDivHeading.setAttribute("id", "MainDivHeading;")
         HeroParagraph.setAttribute("id", "HeroParagraph");
         HeroParagraph.setAttribute("class", "mt-3");
-        HeroParagraph.innerHTML = `This is the landing page for a website in development as part of a ongoing for the course WEBD6201.\nThe creators of this site include Katherine Bellman and Russell Waring, who both both enrolled in\n the Computer Programming and Analysis Program at Durham College. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you!\n`;
+        HeroParagraph.innerHTML = `This is the landing page for a website in development as part of a ongoing for the course WEBD6201.\nThe creators of this site include Katherine Bellman and Russelll Waring, who both both enrolled in\n the Computer Programming and Analysis Program at Durham College. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you!\n`;
         HeroImage.setAttribute("id", "CodeHeroImage");
         HeroImage.setAttribute("src", "../Assets/hero_image_code.png");
 
@@ -53,9 +53,18 @@
     {
         console.log("Projects Page");
 
+        // Step 1 - entry ref
         let MainDivHeading = document.getElementsByTagName("h1")[0];
-        MainDivHeading.innerHTML = `Our Projects`;
-        console.log(MainDivHeading);
+        MainDivHeading.textContent = "Our Projects";
+        //console.log(MainDivHeading);
+
+        // Step 2 - create html element
+        let headingTwoKB = document.getElementsByTagName("h2")[0];
+        let headingTwoRW = document.getElementsByTagName("h2")[1];
+
+        
+
+
 
         let Header_Kat_Services = "Katherine Specializes in: ";    
         let Kat_Services = [
@@ -75,6 +84,26 @@
                 text:"",
             },
         ];
+
+        let Header_Russell_Services = "Russell Specializes in: ";    
+        let Russell_Services = [
+            {
+                Service: "Web Design",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "Divi Wordpress Development",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "UI Design",
+                pic: "",
+                text:"",
+            },
+        ];
+
     }
 
     function DisplayServicesPage()
@@ -101,8 +130,8 @@
         ];
 
 
-        let Header_Russel_Services = "Russel Specializes in: ";    
-        let Russel_Services = [
+        let Header_Russell_Services = "Russell Specializes in: ";    
+        let Russell_Services = [
             {
                 Service: "Web Design",
                 pic: "",
@@ -165,7 +194,7 @@
             case "Home":
                 DisplayHomePage();
                 break;
-            case "Projects":
+            case "Products":
                 DisplayProjectsPage();
                 break;
             case "Services":
