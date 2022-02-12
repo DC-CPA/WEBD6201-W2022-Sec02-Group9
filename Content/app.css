@@ -40,7 +40,7 @@ button:hover{
 }
 
 input{
-    max-width: 27em;
+    max-width: 8em;
 }
 
 form{
@@ -74,9 +74,7 @@ form{
 
 /* Page Elements Styling */
 .project-container {
-    position: relative;
-    font-family: Arial;
-    
+    position: relative; 
   }
 
 .project-container-text {
@@ -121,4 +119,12 @@ form{
    display:block;
    filter: brightness(1.3) hue-rotate(20%)  saturate(6.6) sepia(1.25) ;
    -webkit-filter: brightness(1.3) hue-rotate(20%)  saturate(6.6) sepia(1.25) ;
+}
+
+.card-img-top{
+    max-width: 50%;
+    align-self: center;
+    background: hsla(271, 30%, 26%, 0.165);
+    margin-top: 1.5rem;
+    image-rendering: crisp-edges;
 }

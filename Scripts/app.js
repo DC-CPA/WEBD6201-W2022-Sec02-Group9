@@ -113,18 +113,15 @@
         let Kat_Services = [
             {
                 Service: "Web Design",
-                pic: "",
-                text:"",
+                // text:"",
             },
             {
                 Service: "Divi Wordpress Development",
-                pic: "",
-                text:"",
+                // text:"",
             },
             {
                 Service: "UI Design",
-                pic: "",
-                text:"",
+                // text:"",
             },
         ];
 
@@ -132,19 +129,16 @@
         let Header_Russel_Services = "Russel Specializes in: ";    
         let Russel_Services = [
             {
-                Service: "Web Design",
-                pic: "",
-                text:"",
+                Service: "System Development",
+                // text:"",
             },
             {
-                Service: "Divi Wordpress Development",
-                pic: "",
-                text:"",
+                Service: "C# .Net Core Frameworks Development",
+                // text:"",
             },
             {
-                Service: "UI Design",
-                pic: "",
-                text:"",
+                Service: "",
+                // text:"",
             },
         ];
     }
@@ -158,14 +152,12 @@
             {
                 Name: "Katherine Bellman",
                 Student_number: "100325825",
-                image :"../Assets/Katherine_Bellman.png",
-                resume_link: "https://dconline-my.sharepoint.com/:b:/g/personal/katherine_bellman_dcmail_ca/EcraWZsK4R5Bo2UXGh91c8MBl_12pDZ66gjbi2QhUquLtg?e=KcHZhB", //make sure to use target="_blank" to open in new tab
+                resume_link: "https://dconline-my.sharepoint.com/:b:/g/personal/katherine_bellman_dcmail_ca/EcraWZsK4R5Bo2UXGh91c8MBl_12pDZ66gjbi2QhUquLtg?e=KcHZhB", 
             },
             {
-                Name: "Web Design",
-                Student_number: "",
-                image :"",
-                resume_link: "",
+                Name: "Russell Waring",
+                Student_number: "100528426",
+                resume_link: "#",
             },
         ];
     }
