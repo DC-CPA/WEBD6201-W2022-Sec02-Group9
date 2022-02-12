@@ -5,6 +5,11 @@ body{
     background-color: #95adbe;
 }
 
+footer{
+    background-color:  #95adbe36;
+    margin: 0;
+}
+
 a:hover,a:visited{
     color: #fbfffe;
 }
@@ -17,6 +22,7 @@ button:hover{
     border-color: #503a65 !important;
     color: #e0f0ea !important;
 }
+
 
 
 /* Customized Bootstrap Classes */

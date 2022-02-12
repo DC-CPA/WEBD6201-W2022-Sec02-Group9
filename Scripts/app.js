@@ -61,57 +61,8 @@
     function DisplayProjectsPage()
     {
         console.log("Projects Page");
-    }
 
-    function DisplayServicesPage()
-    {
-        console.log("Services Page");
-        
-                let Header_Kat_Services = "Katherine Specializes in: ";    
-                let Kat_Services = [
-                    {
-                        Service: "Web Design",
-                        pic: "",
-                        text:"",
-                    },
-                    {
-                        Service: "Divi Wordpress Development",
-                        pic: "",
-                        text:"",
-                    },
-                    {
-                        Service: "UI Design",
-                        pic: "",
-                        text:"",
-                    },
-                ];
-        
-        
-                  let Header_Russel_Services = "Russel Specializes in: ";    
-                let Russel_Services = [
-                    {
-                        Service: "Web Design",
-                        pic: "",
-                        text:"",
-                    },
-                    {
-                        Service: "Divi Wordpress Development",
-                        pic: "",
-                        text:"",
-                    },
-                    {
-                        Service: "UI Design",
-                        pic: "",
-                        text:"",
-                    },
-                ];
-    }
-
-    function DisplayAboutPage()
-    {
-        console.log("About Page");
-
-        let Header_About_Header = "";    
+        let Header_Kat_Services = "Katherine Specializes in: ";    
         let Kat_Services = [
             {
                 Service: "Web Design",
@@ -122,6 +73,76 @@
                 Service: "Divi Wordpress Development",
                 pic: "",
                 text:"",
+            },
+            {
+                Service: "UI Design",
+                pic: "",
+                text:"",
+            },
+        ];
+    }
+
+    function DisplayServicesPage()
+    {
+        console.log("Services Page");
+        
+        let Header_Kat_Services = "Katherine Specializes in: ";    
+        let Kat_Services = [
+            {
+                Service: "Web Design",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "Divi Wordpress Development",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "UI Design",
+                pic: "",
+                text:"",
+            },
+        ];
+
+
+        let Header_Russel_Services = "Russel Specializes in: ";    
+        let Russel_Services = [
+            {
+                Service: "Web Design",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "Divi Wordpress Development",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "UI Design",
+                pic: "",
+                text:"",
+            },
+        ];
+    }
+
+    function DisplayAboutPage()
+    {
+        console.log("About Page");
+
+        let Header_About_Header = "";    
+        let About_Cards_Data = [
+            {
+                Name: "Katherine Bellman",
+                Student_number: "100325825",
+                image :"../Assets/Katherine_Bellman.png",
+                resume_link: "https://dconline-my.sharepoint.com/:b:/g/personal/katherine_bellman_dcmail_ca/EcraWZsK4R5Bo2UXGh91c8MBl_12pDZ66gjbi2QhUquLtg?e=KcHZhB", //make sure to use target="_blank" to open in new tab
+            },
+            {
+                Name: "Web Design",
+                Student_number: "",
+                image :"",
+                resume_link: "",
             },
         ];
     }
