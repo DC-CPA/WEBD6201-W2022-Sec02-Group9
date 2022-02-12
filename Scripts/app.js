@@ -36,7 +36,7 @@
         MainDivHeading.setAttribute("id", "MainDivHeading;")
         HeroParagraph.setAttribute("id", "HeroParagraph");
         HeroParagraph.setAttribute("class", "mt-3");
-        HeroParagraph.innerHTML = `As  students of Durham College\'s Computer Programming and Analysis Program. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you.\n`;
+        HeroParagraph.innerHTML = `This is the landing page for a website in development as part of a ongoing for the course WEBD6201.\nThe creators of this site include Katherine Bellman and Russell Waring, who both both enrolled in\n the Computer Programming and Analysis Program at Durham College. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you!\n`;
         HeroImage.setAttribute("id", "CodeHeroImage");
         HeroImage.setAttribute("src", "../Assets/hero_image_code.png");
 
@@ -52,6 +52,10 @@
     function DisplayProjectsPage()
     {
         console.log("Projects Page");
+
+        let MainDivHeading = document.getElementsByTagName("h1")[0];
+        MainDivHeading.innerHTML = `Our Projects`;
+        console.log(MainDivHeading);
 
         let Header_Kat_Services = "Katherine Specializes in: ";    
         let Kat_Services = [
