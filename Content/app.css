@@ -43,6 +43,9 @@ button:hover{
     background-color: #503a65;
     color: #e0f0ea;
 }
+.fa-user-secret{
+    color: #422e55;
+}
 
 .nav-link{
     color: #503a65 !important;
