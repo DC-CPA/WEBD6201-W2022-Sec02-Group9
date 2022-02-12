@@ -145,6 +145,16 @@
     function DisplayContactPage()
     {
         console.log("Contact Page");
+
+        let contactName = document.body.getElementById("input_name");
+        let contactPhoneNumber = document.body.getElementById("input_number");
+        let contactEmail = document.body.getElementById("input_email");
+        let contactMessage = document.body.getElementById("input_message");
+        let buttonSubmit = document.body.getElementById("input_submit");
+        let buttonClear = document.body.getElementById("input_clear");
+
+
+        
     }
 
 
