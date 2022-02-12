@@ -50,4 +50,5 @@ button:hover{
     height:40vh;
     margin-left: auto;
     margin-right: auto;
+    display:block;
 }
