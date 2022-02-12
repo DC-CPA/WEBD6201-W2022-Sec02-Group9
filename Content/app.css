@@ -58,13 +58,22 @@ button:hover{
 }
 
 /* Page Elements Styling */
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.grid-item {
-    border: 1px solid;
-    text-align: center;
+.project-container {
+    position: relative;
+    font-family: Arial;
+  }
+
+.project-container-text {
+    position: absolute;
+    bottom: 20px;
+    right: 350px;
+    background-color: rgba(69, 68, 68, 0.217);
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 12px;
+    padding-top: 10px;
 }
 
 /* Image Styling */

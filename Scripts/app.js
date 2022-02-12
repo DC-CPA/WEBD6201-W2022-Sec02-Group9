@@ -59,12 +59,32 @@
         //console.log(MainDivHeading);
 
         // Step 2 - create html element
-        let headingTwoKB = document.getElementsByTagName("h2")[0];
-        let headingTwoRW = document.getElementsByTagName("h2")[1];
+        let h6KB = document.getElementsByTagName("h6")[0];
+        let paraKB = document.getElementsByTagName("p")[0];
+        let imgKB = document.getElementsByTagName("img")[0];
+        let h6RW = document.getElementsByTagName("h6")[1];
+        let paraRW = document.getElementsByTagName("p")[1];
+        let imgRW = document.getElementsByTagName("img")[1];
+        let h6KB2 = document.getElementsByTagName("h6")[2];
+        let paraKB2 = document.getElementsByTagName("p")[2];
+        let imgKB2 = document.getElementsByTagName("img")[2];
 
-        
-
-
+        // Step 3 - configure elements
+        h6KB.innerHTML = "K. Bellman";
+        paraKB.innerHTML = "Cases By Region, NETD2202";
+        imgKB.setAttribute("src", "../Assets/NETD_2202--FINAL- averageWeeklyCasesByRegion.png");
+        imgKB.setAttribute("alt", "Cases By Region");
+        imgKB.setAttribute("style", "width:50%");
+        h6RW.innerHTML = "R. Waring";
+        paraRW.innerHTML = "In-class exercise 4, NETD2202";
+        imgRW.setAttribute("src", "../Assets/netd2202_ice4_waring.PNG");
+        imgRW.setAttribute("alt", "Joes Coffee");
+        imgRW.setAttribute("style", "width:50%");
+        h6KB2.innerHTML = "K. Bellman";
+        paraKB2.innerHTML = "Validation, NETD2202 final";
+        imgKB2.setAttribute("src", "../Assets/NETD_2202--FINAL- validation02.png");
+        imgKB2.setAttribute("alt", "Validation");
+        imgKB2.setAttribute("style", "width:50%");
 
         let Header_Kat_Services = "Katherine Specializes in: ";    
         let Kat_Services = [
