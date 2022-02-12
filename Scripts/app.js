@@ -14,29 +14,114 @@
     {
         // Name of button and id are same... this is a naming convention. Button is actually an 'html element'
         console.log("Home Page");
-
-
-
+        
+        
+        //Displayed content
         let AboutUsButton = document.getElementById("AboutUsButton");
         AboutUsButton.addEventListener("click", function()
         {
             location.href = "about.html";
         });
+        
+        let HeroParagraph = '<p id="HeroParagraph" class="mt-3">'+ TextHero +'</p>';
+        let TextHero = 'As  students of Durham College\'s Computer Programming and Analysis Program. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you.\n';
+        let CodeHeroImage = '<img id="CodeHeroImage" class="img-fluid" src="../Assets/hero_image_code.png"/>'
+
+
+        //Get access to div container for insertion
+        //let DocumentBodyInsert = document.body;
+        let MainDivContainer = document.getElementsByTagName("main")[0];
+        MainDivContainer.setAttribute("id","MainDivContainer");
+
+
+        
+        //Create container for Hero content
+        //let HeroParagraph = document.createElement('p');
+        //let HeroArticleContainer = document.createElement("article");
+
+        //Page Hero image
+        let HeroImage = document.createElement("img");
+        HeroImage.innerHTML = CodeHeroImage;
+
+
+        //setting attributes of created elements
+        //HeroParagraph.setAttribute("id","HeroParagraph");
+        //HeroParagraph.setAttribute("class", "mt-3");
+        HeroParagraph.innerHTML = TextHero;
+
+        MainDivContainer.appendChild(HeroImage);
+        MainDivContainer.appendChild(HeroParagraph);
+
+        //DocumentBodyInsert.appendChild(MainDivContainer);
+
     }
 
-    function DisplayProductsPage()
+    function DisplayProjectsPage()
     {
-        console.log("Products Page");
+        console.log("Projects Page");
     }
 
     function DisplayServicesPage()
     {
         console.log("Services Page");
+        
+                let Header_Kat_Services = "Katherine Specializes in: ";    
+                let Kat_Services = [
+                    {
+                        Service: "Web Design",
+                        pic: "",
+                        text:"",
+                    },
+                    {
+                        Service: "Divi Wordpress Development",
+                        pic: "",
+                        text:"",
+                    },
+                    {
+                        Service: "UI Design",
+                        pic: "",
+                        text:"",
+                    },
+                ];
+        
+        
+                  let Header_Russel_Services = "Russel Specializes in: ";    
+                let Russel_Services = [
+                    {
+                        Service: "Web Design",
+                        pic: "",
+                        text:"",
+                    },
+                    {
+                        Service: "Divi Wordpress Development",
+                        pic: "",
+                        text:"",
+                    },
+                    {
+                        Service: "UI Design",
+                        pic: "",
+                        text:"",
+                    },
+                ];
     }
 
     function DisplayAboutPage()
     {
         console.log("About Page");
+
+        let Header_About_Header = "";    
+        let Kat_Services = [
+            {
+                Service: "Web Design",
+                pic: "",
+                text:"",
+            },
+            {
+                Service: "Divi Wordpress Development",
+                pic: "",
+                text:"",
+            },
+        ];
     }
 
     function DisplayContactPage()
@@ -52,14 +137,16 @@
 
          //pop in the favicon
         AddToHead();
+        //Change the navagation text
+        changeNav();
 
         switch(document.title)
         {
             case "Home":
                 DisplayHomePage();
                 break;
-            case "Products":
-                DisplayProductsPage();
+            case "Projects":
+                DisplayProjectsPage();
                 break;
             case "Services":
                 DisplayServicesPage();
@@ -79,6 +166,15 @@
         console.log("favicon appended");
         // website favicon attribute setting
         $('head').append('<link rel="shortcut icon" type="image/svg" href="../Assets/site_icon_fas_user-secret.svg">');
+    }
+
+    function changeNav()
+    {
+        console.log('nav: "Products" changed to "Projects"');
+        let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
+        let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Project </a>');
+        navBarTarget.innerHTML = insertText.textContent;
+        console.log(navBarTarget);
     }
 
     // Event listener for hooking into the Start function
