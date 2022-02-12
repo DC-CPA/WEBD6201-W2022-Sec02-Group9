@@ -61,8 +61,57 @@
     function DisplayProjectsPage()
     {
         console.log("Projects Page");
+    }
 
-        let Header_Kat_Services = "Katherine Specializes in: ";    
+    function DisplayServicesPage()
+    {
+        console.log("Services Page");
+        
+                let Header_Kat_Services = "Katherine Specializes in: ";    
+                let Kat_Services = [
+                    {
+                        Service: "Web Design",
+                        pic: "",
+                        text:"",
+                    },
+                    {
+                        Service: "Divi Wordpress Development",
+                        pic: "",
+                        text:"",
+                    },
+                    {
+                        Service: "UI Design",
+                        pic: "",
+                        text:"",
+                    },
+                ];
+        
+        
+                  let Header_Russel_Services = "Russel Specializes in: ";    
+                let Russel_Services = [
+                    {
+                        Service: "Web Design",
+                        pic: "",
+                        text:"",
+                    },
+                    {
+                        Service: "Divi Wordpress Development",
+                        pic: "",
+                        text:"",
+                    },
+                    {
+                        Service: "UI Design",
+                        pic: "",
+                        text:"",
+                    },
+                ];
+    }
+
+    function DisplayAboutPage()
+    {
+        console.log("About Page");
+
+        let Header_About_Header = "";    
         let Kat_Services = [
             {
                 Service: "Web Design",
@@ -74,42 +123,7 @@
                 pic: "",
                 text:"",
             },
-            {
-                Service: "UI Design",
-                pic: "",
-                text:"",
-            },
         ];
-
-
-          let Header_Russel_Services = "Russel Specializes in: ";    
-        let Russel_Services = [
-            {
-                Service: "Web Design",
-                pic: "",
-                text:"",
-            },
-            {
-                Service: "Divi Wordpress Development",
-                pic: "",
-                text:"",
-            },
-            {
-                Service: "UI Design",
-                pic: "",
-                text:"",
-            },
-        ];
-    }
-
-    function DisplayServicesPage()
-    {
-        console.log("Services Page");
-    }
-
-    function DisplayAboutPage()
-    {
-        console.log("About Page");
     }
 
     function DisplayContactPage()
