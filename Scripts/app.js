@@ -22,20 +22,6 @@
         {
             location.href = "about.html";
         });
-<<<<<<< HEAD
-        
-        let HeroParagraph = '<p id="HeroParagraph" class="mt-3">'+ TextHero +'</p>';
-        let TextHero = 'As  students of Durham College\'s Computer Programming and Analysis Program. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you.\n';
-        let CodeHeroImage = '<img id="CodeHeroImage" class="img-fluid" src="../Assets/hero_image_code.png"/>'
-
-
-        //Get access to div container for insertion
-        //let DocumentBodyInsert = document.body;
-        let MainDivContainer = document.getElementsByTagName("main")[0];
-        MainDivContainer.setAttribute("id","MainDivContainer");
-      
-=======
->>>>>>> 014c7639583107cf09ed6aba2060670a6078633f
 
         // Step 1 - get a reference to an entry point
         let MainDivContainer = document.getElementsByTagName("main")[0];        
