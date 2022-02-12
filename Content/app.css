@@ -36,3 +36,12 @@ button:hover{
 }
 
 /* Page Elements Styling */
+
+
+/* Image Styling */
+
+#CodeHeroImage {
+    height:40vh;
+    margin-left: auto;
+    margin-right: auto;
+}
