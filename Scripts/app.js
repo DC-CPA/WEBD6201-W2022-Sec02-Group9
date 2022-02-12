@@ -147,36 +147,63 @@
     {
         console.log("About Page");
 
-        let Header_About_Header = "";    
+        let Header_About_Header = "About Us";    
         let About_Cards_Data = [
             {
                 Name: "Katherine Bellman",
-                Student_number: "100325825",
+                Github: "https://github.com/Tsukiyomi-Inari",
+                blurb: "I am Katherine Bellman, studying Computer Programming and Analysis at Durham College in Oshawa. As an Alumni of OCAD University, I apply creative solutions to computational problems and design attractive user interfaces through colour theory practices.\n	Continuous refinement has aided in organization and time management, being my most vital asset within a team. I am looking for a position in web development or system development to contribute to our community.",
                 resume_link: "https://dconline-my.sharepoint.com/:b:/g/personal/katherine_bellman_dcmail_ca/EcraWZsK4R5Bo2UXGh91c8MBl_12pDZ66gjbi2QhUquLtg?e=KcHZhB", 
             },
             {
                 Name: "Russell Waring",
-                Student_number: "100528426",
-                resume_link: "#",
+                Github: "https://github.com/RussellWaring",
+                blurb:"",
+                resume_link: "https://www.linkedin.com/in/russell-waring-476372a4/?originalSubdomain=ca",
             },
         ];
-    }
 
-    function DisplayContactPage()
-    {
-        console.log("Contact Page");
+        //Insert the title text
 
-        let contactName = document.body.getElementById("input_name");
-        let contactPhoneNumber = document.body.getElementById("input_number");
-        let contactEmail = document.body.getElementById("input_email");
-        let contactMessage = document.body.getElementById("input_message");
-        let buttonSubmit = document.body.getElementById("input_submit");
-        let buttonClear = document.body.getElementById("input_clear");
+        // Get the entry location for elements for cards
+        let insertTitle = document.getElementsByClassName("card-title");
+        let insertText = document.getElementsByClassName("card-text");
+        let insertGitHubLink = document.getElementsByClassName("card-github");
+        let insertButtonLink = document.getElementsByClassName("card-button");
+
+        // Loop through to insert the data to each
+        for (let index = 0; index < About_Cards_Data; index++) {
+            
+            
+                insertTitle = About_Cards_Data[Name];
+                insertGitHubLink = About_Cards_Data[Github];
+                insertText = About_Cards_Data[blurb];
+                insertButtonLink  = About_Cards_Data[resume_link];
+                
+            }
+            
+        }
         
+        function DisplayContactPage()
+        {
+            console.log("Contact Page");
+            
+            let contactName = document.body.getElementById("input_name").textContent;
+            let contactPhoneNumber = document.body.getElementById("input_number").textContent;
+            let contactEmail = document.body.getElementById("input_email").textContent;
+            let contactMessage = document.body.getElementById("input_message").textContent;
+            let buttonSubmit = document.body.getElementById("input_submit").textContent;
+            let buttonClear = document.body.getElementById("input_clear").textContent;
+            
+            let ToConsoleTrigger = document.addEventListener("click", buttonSubmit);
 
-    }
 
-
+            console.log( "Contact Form Submission: \n" + contactName + "\n" + contactPhoneNumber +"\n" +  contactEmail + "\n" + contactMessage );
+            
+        }
+        
+        
+ 
     // named function option
     function Start() 
     {
