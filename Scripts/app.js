@@ -24,7 +24,8 @@
         });
 
         // Step 1 - get a reference to an entry point
-        let MainDivContainer = document.getElementsByTagName("main")[0];        
+        let MainDivContainer = document.getElementsByTagName("main")[0];  
+        let MainDivHeading = document.getElementsByTagName("h1")[0];      
 
         // Step 2 - create an html element in memory
         let HeroImage = document.createElement("img");
@@ -32,6 +33,7 @@
 
         // Step 3 - configure new element
         MainDivContainer.setAttribute("id","MainDivContainer");
+        MainDivHeading.setAttribute("id", "MainDivHeading;")
         HeroParagraph.setAttribute("id", "HeroParagraph");
         HeroParagraph.setAttribute("class", "mt-3");
         HeroParagraph.innerHTML = `As  students of Durham College\'s Computer Programming and Analysis Program. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you.\n`;
@@ -39,8 +41,8 @@
         HeroImage.setAttribute("src", "../Assets/hero_image_code.png");
 
         // Step 4 - perform insertion
-        MainDivContainer.appendChild(HeroImage);
-        MainDivContainer.appendChild(HeroParagraph);
+        MainDivHeading.after(HeroImage);
+        HeroImage.after(HeroParagraph);
         console.log(HeroParagraph);
 
         //DocumentBodyInsert.appendChild(MainDivContainer);
