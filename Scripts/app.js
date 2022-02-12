@@ -164,6 +164,7 @@
         ];
 
         //Insert the title text
+          Header_About_Header = document.getElementsByTagName("h1").textContent;
 
         // Get the entry location for elements for cards
         let insertTitle = document.getElementsByClassName("card-title");
@@ -175,7 +176,7 @@
         for (let index = 0; index < About_Cards_Data; index++) {
             
             
-                insertTitle = About_Cards_Data[Name];
+                insertTitle.textContent = About_Cards_Data[Name];
                 insertGitHubLink = About_Cards_Data[Github];
                 insertText = About_Cards_Data[blurb];
                 insertButtonLink  = About_Cards_Data[resume_link];
