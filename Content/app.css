@@ -1,8 +1,11 @@
 /* Custom CSS file */
 
 /* Main Tag Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500;900&display=swap');
+
 body{
     background-color: #95adbe;
+    font-family: 'Inter', sans-serif;
 }
 
 footer{
@@ -36,15 +39,27 @@ button:hover{
     color: #e0f0ea !important;
 }
 
+input{
+    max-width: 27em;
+}
 
+form{
+    align-content: center;
+}
 
 /* Customized Bootstrap Classes */
 .navbar{
     background-color: #503a65;
-    color: #e0f0ea;
+    color: #e0f0ea;    
 }
 .fa-user-secret{
     color: #422e55;
+}
+.navbar-brand{
+    font-weight: 400;
+    text-shadow: 1px 1px 2px  #95adbe;
+    kerning: .04em;
+    color: #594b669c;
 }
 
 .nav-link{
