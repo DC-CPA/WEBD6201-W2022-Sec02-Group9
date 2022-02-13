@@ -111,6 +111,10 @@ form{
     background-blend-mode: overlay;
 }
 
+.card-github {
+    color:#422e55;
+}
+
 /* Image Styling */
 
 #CodeHeroImage {

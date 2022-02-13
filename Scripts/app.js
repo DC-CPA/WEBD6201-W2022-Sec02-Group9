@@ -126,26 +126,46 @@
         ];
 
 
-        let Header_Russel_Services = "Russel Specializes in: ";    
+        let Header_Russel_Services = "Russell Specializes in: ";    
         let Russel_Services = [
             {
                 Service: "System Development",
-                // text:"",
+                //text: "",
             },
             {
                 Service: "C# .Net Core Frameworks Development",
-                // text:"",
+                //text: "",
             },
             {
-                Service: "",
-                // text:"",
+                Service: "Proofreading Code",
+                //text: "",
             },
         ];
 
-        // Insertion point class for each name=> service heading  
+        // Insertion point class for each name=> service heading 
+        let serviceHeaderKB = document.getElementsByClassName("service-heading")[0];
+        serviceHeaderKB.innerHTML = Header_Kat_Services;
+        
+        let serviceHeaderRW = document.getElementsByClassName("service-heading")[1];
+        serviceHeaderRW.innerHTML = Header_Russel_Services;
+        
+
+
 
         // Insertion point class for Name of service => service-note
+        let serviceKB0 = document.getElementsByClassName("service-note")[0];
+        let serviceKB1 = document.getElementsByClassName("service-note")[1];
+        let serviceKB2 = document.getElementsByClassName("service-note")[2];
+        serviceKB0.innerHTML = Kat_Services[0].Service;
+        serviceKB1.innerHTML = Kat_Services[1].Service;
+        serviceKB2.innerHTML = Kat_Services[2].Service;
 
+        let serviceRW0 = document.getElementsByClassName("service-note")[3];
+        let serviceRW1 = document.getElementsByClassName("service-note")[4];
+        let serviceRW2 = document.getElementsByClassName("service-note")[5];
+        serviceRW0.innerHTML = Russel_Services[0].Service;
+        serviceRW1.innerHTML = Russel_Services[1].Service;
+        serviceRW2.innerHTML = Russel_Services[2].Service;
     }
 
     function DisplayAboutPage()
@@ -155,16 +175,16 @@
         let Header_About_Header = "About Us";    
         let About_Cards_Data = [
             {
+                Name: "Russell Waring",
+                Github: "https://github.com/RussellWaring",
+                blurb:"Greetings. I am a student of Durham College in Oshawa studying Computer Programming and Analysis. I have an Urban Forestry Technician Degree and broad working experience in many fields. Although I grew up in a small town, I have big dreams!",
+                resume_link: "https://www.linkedin.com/in/russell-waring/",
+            },
+            {
                 Name: "Katherine Bellman",
                 Github: "https://github.com/Tsukiyomi-Inari",
                 blurb: "I am Katherine Bellman, studying Computer Programming and Analysis at Durham College in Oshawa. As an Alumni of OCAD University, I apply creative solutions to computational problems and design attractive user interfaces through colour theory practices.\n	Continuous refinement has aided in organization and time management, being my most vital asset within a team. I am looking for a position in web development or system development to contribute to our community.",
                 resume_link: "https://dconline-my.sharepoint.com/:b:/g/personal/katherine_bellman_dcmail_ca/EcraWZsK4R5Bo2UXGh91c8MBl_12pDZ66gjbi2QhUquLtg?e=KcHZhB", 
-            },
-            {
-                Name: "Russell Waring",
-                Github: "https://github.com/RussellWaring",
-                blurb:"",
-                resume_link: "https://www.linkedin.com/in/russell-waring-476372a4/?originalSubdomain=ca",
             },
         ];
 
@@ -173,10 +193,40 @@
          titleH1.innerHTML = Header_About_Header;  
 
         // Get the entry location for elements for cards
-        let insertTitle = document.getElementsByClassName("card-title");
-        let insertText = document.getElementsByClassName("card-text");
-        let insertGitHubLink = document.getElementsByClassName("card-github");
-        let insertButtonLink = document.getElementsByClassName("card-button");
+        // let insertTitle = document.getElementsByClassName("card-title");
+        // let insertText = document.getElementsByClassName("card-text");
+        // let insertGitHubLink = document.getElementsByClassName("card-github");
+        // let insertButtonLink = document.getElementsByClassName("card-button");
+
+        document.getElementsByClassName("card-title")[0].innerHTML = About_Cards_Data[0].Name;
+        //document.getElementsByClassName("card-github")[0].innerHTML = About_Cards_Data[0].Github;
+        document.getElementsByClassName("card-text")[0].innerHTML = About_Cards_Data[0].blurb;
+        let russell_resume = document.getElementsByClassName("card-button")[0]; 
+        russell_resume.setAttribute("href", About_Cards_Data[0].resume_link);
+        russell_resume.textContent = "Resume";
+
+        console.log(russell_resume.getAttribute("href"));
+
+        let russell_button = document.getElementsByClassName("btn")[0];
+        russell_button.addEventListener("click", function()
+        {
+            location.href = russell_resume.getAttribute("href");
+        });
+
+        document.getElementsByClassName("card-title")[1].innerHTML = About_Cards_Data[1].Name;
+        //document.getElementsByClassName("card-github")[1].innerHTML = About_Cards_Data[1].Github;
+        document.getElementsByClassName("card-text")[1].innerHTML = About_Cards_Data[1].blurb;
+        let bellman_resume = document.getElementsByClassName("card-button")[1]; 
+        bellman_resume.setAttribute("href", About_Cards_Data[0].resume_link);
+        bellman_resume.textContent = "Resume";
+
+        console.log(bellman_resume.getAttribute("href"));
+
+        let bellman_button = document.getElementsByClassName("btn")[1];
+        bellman_button.addEventListener("click", function()
+        {
+            location.href = bellman_resume.getAttribute("href");
+        });
 
     }
 
