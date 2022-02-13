@@ -227,8 +227,7 @@
     {
         console.log("App Started!");
 
-        // Pop in the favicon
-        AddToHead();
+
         // Change the navigation text
         changeNav();
         // Insert human resources tab in nav bar between 'About Us' and 'Contact Us'
@@ -254,19 +253,12 @@
         }        
     }
 
-    // Creates, sets  favicon to 
-    function AddToHead()
-    {
-        console.log("favicon appended");
-        // website favicon attribute setting
-        $('head').append('<link rel="shortcut icon" type="image/svg" href="../Assets/site_icon_fas_user-secret.svg">');
-    }
 
     function changeNav()
     {
         console.log('nav: "Products" changed to "Projects"');
         let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
-        let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Project </a>');
+        let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Projects </a>');
         navBarTarget.innerHTML = insertText.textContent;
         console.log(navBarTarget);
     }
