@@ -169,7 +169,8 @@
         ];
 
         //Insert the title text
-          Header_About_Header = document.getElementsByTagName("h1").textContent;
+         let titleH1 = document.getElementsByTagName("h1")[0];
+         titleH1.innerHTML = Header_About_Header;  
 
         // Get the entry location for elements for cards
         let insertTitle = document.getElementsByClassName("card-title");
@@ -189,7 +190,7 @@
         { 
             setTimeout(document.querySelector('form').addEventListener("submit",function(){
                 
-                console.log('New Submission: \nContact: '+document.getElementById("input_name").value + '\nPhone Number: '+document.getElementById("input_number").value + '\nEmail: ' + document.getElementById("input_email").value + '\nMessage: ' +document.getElementById("input_message").value);
+                console.log('New Submission: \nContact: ' + document.getElementById("input_name").value + '\nPhone Number: '+ document.getElementById("input_number").value + '\nEmail: ' + document.getElementById("input_email").value + '\nMessage: ' + document.getElementById("input_message").value);
             }), 3000);
                 
         }
