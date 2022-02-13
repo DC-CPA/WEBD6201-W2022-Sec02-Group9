@@ -229,8 +229,7 @@
     {
         console.log("App Started!");
 
-        // Pop in the favicon
-        AddToHead();
+
         // Change the navigation text
         changeNav();
         // Insert human resources tab in nav bar between 'About Us' and 'Contact Us'
@@ -256,13 +255,6 @@
         }        
     }
 
-    // Creates, sets  favicon to 
-    function AddToHead()
-    {
-        console.log("favicon appended");
-        // website favicon attribute setting
-        $('head').append('<link rel="shortcut icon" type="image/svg" href="../Assets/site_icon_fas_user-secret.svg">');
-    }
 
     function changeNav()
     {
