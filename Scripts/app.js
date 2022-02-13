@@ -181,29 +181,22 @@
             
     }
         
-        function DisplayContactPage()
-        {
-            console.log("Contact Page");
-            
-            
-            let buttonSubmit = document.getElementById("input_submit");
-            let buttonClear = document.getElementById("input_clear");
-            
-            
+    function DisplayContactPage()
+    {
+        console.log("Contact Page");
 
-            function SendToConsole()
-            { 
-                setInterval(document.querySelector('form').addEventListener(buttonSubmit.onsubmit, e => {
-                    
-                    let formInput = new FormData([e.target]);
-                    console.log(formInput);
-                }), 3000);
+        function SendToConsole()
+        { 
+            setTimeout(document.querySelector('form').addEventListener("submit",function(){
                 
+                console.log('New Submission: \nContact: '+document.getElementById("input_name").value + '\nPhone Number: '+document.getElementById("input_number").value + '\nEmail: ' + document.getElementById("input_email").value + '\nMessage: ' +document.getElementById("input_message").value);
+            }), 3000);
                 
-            }
-
-            
         }
+
+        SendToConsole();
+        
+    }
  
     // named function option
     function Start() 
