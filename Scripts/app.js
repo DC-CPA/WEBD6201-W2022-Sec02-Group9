@@ -25,20 +25,19 @@
 
         // Step 1 - get a reference to an entry point
         let MainDivContainer = document.getElementsByTagName("main")[0];  
-        let MainDivHeading = document.getElementsByTagName("h1")[0];      
+        let MainDivHeading = document.getElementsByTagName("h1")[0];
+        let HeroImage = document.getElementById("CodeHeroImage");
 
         // Step 2 - create an html element in memory
-        let HeroImage = document.createElement("img");
         let HeroParagraph = document.createElement("p");
 
         // Step 3 - configure new element
         MainDivContainer.setAttribute("id","MainDivContainer");
-        MainDivHeading.setAttribute("id", "MainDivHeading;")
+        MainDivHeading.setAttribute("id", "MainDivHeading;");
         HeroParagraph.setAttribute("id", "HeroParagraph");
         HeroParagraph.setAttribute("class", "mt-3");
         HeroParagraph.innerHTML = `This is the landing page for a website in development as part of a ongoing for the course WEBD6201.\nThe creators of this site include Katherine Bellman and Russell Waring, who both both enrolled in\n the Computer Programming and Analysis Program at Durham College. \n We were moulded into developers who put our clients needs first.\n Check out out software development services to get a taste of what we can do for you!\n`;
-        HeroImage.setAttribute("id", "CodeHeroImage");
-        HeroImage.setAttribute("src", "../Assets/hero_image_code.png");
+
 
         // Step 4 - perform insertion
         MainDivHeading.after(HeroImage);
