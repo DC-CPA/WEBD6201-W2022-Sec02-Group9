@@ -192,20 +192,23 @@
         
         function DisplayContactPage()
         {
-            console.log("Contact Page");
-            
-            let constactForm = document.getElementById("contactForm");
-            let buttonSubmit = document.getElementById("input_submit");
-            let buttonClear = document.getElementById("input_clear");
-            
-             buttonSubmit.onsubmit = SendToConsole();
+            console.log("Contact Page");            
 
-            function SendToConsole()
-            { 
-                console.log(FormData(constactForm));
+            let input_submit = document.getElementById("input_submit");
+    
+            input_submit.addEventListener("click", function(event)
+            {
+                event.preventDefault();
                 
-            }
-        
+                let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
+                console.log(contact.toString() + "\nMessage:        " + document.getElementById("message").value);
+
+                setTimeout(function()
+                {
+                    window.location.href = "index.html";              
+                }, 3000);
+
+            });        
         }
  
     // named function option
@@ -213,9 +216,9 @@
     {
         console.log("App Started!");
 
-         //pop in the favicon
+        // Pop in the favicon
         AddToHead();
-        //Change the navagation text
+        // Change the navigation text
         changeNav();
         // Insert human resources tab in nav bar between 'About Us' and 'Contact Us'
         insertHumanResources();
