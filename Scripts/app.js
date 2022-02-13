@@ -85,7 +85,7 @@
         imgKB2.setAttribute("alt", "Validation");
         imgKB2.setAttribute("style", "width:50%");
 
-        let Header_Kat_Services = "Katherine Specializes in: ";    
+/*         let Header_Kat_Services = "Katherine Specializes in: ";    
         let Kat_Services = [
             {
                 Service: "Web Design",
@@ -102,7 +102,7 @@
                 pic: "",
                 text:"",
             },
-        ];
+        ]; */
     }
 
     function DisplayServicesPage()
@@ -141,6 +141,11 @@
                 // text:"",
             },
         ];
+
+        // Insertion point class for each name=> service heading  
+
+        // Insertion point class for Name of service => service-note
+
     }
 
     function DisplayAboutPage()
@@ -189,21 +194,19 @@
         {
             console.log("Contact Page");
             
-            let contactName = document.body.getElementById("input_name").textContent;
-            let contactPhoneNumber = document.body.getElementById("input_number").textContent;
-            let contactEmail = document.body.getElementById("input_email").textContent;
-            let contactMessage = document.body.getElementById("input_message").textContent;
-            let buttonSubmit = document.body.getElementById("input_submit").textContent;
-            let buttonClear = document.body.getElementById("input_clear").textContent;
+            let constactForm = document.getElementById("contactForm");
+            let buttonSubmit = document.getElementById("input_submit");
+            let buttonClear = document.getElementById("input_clear");
             
-            let ToConsoleTrigger = document.addEventListener("click", buttonSubmit);
+             buttonSubmit.onsubmit = SendToConsole();
 
-
-            console.log( "Contact Form Submission: \n" + contactName + "\n" + contactPhoneNumber +"\n" +  contactEmail + "\n" + contactMessage );
-            
+            function SendToConsole()
+            { 
+                console.log(FormData(constactForm));
+                
+            }
+        
         }
-        
-        
  
     // named function option
     function Start() 
