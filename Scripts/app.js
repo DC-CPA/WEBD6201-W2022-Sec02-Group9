@@ -177,35 +177,32 @@
         let insertGitHubLink = document.getElementsByClassName("card-github");
         let insertButtonLink = document.getElementsByClassName("card-button");
 
-        // Loop through to insert the data to each
-        for (let index = 0; index < About_Cards_Data; index++) {
+        
             
-            
-                insertTitle.textContent = About_Cards_Data[Name];
-                insertGitHubLink = About_Cards_Data[Github];
-                insertText = About_Cards_Data[blurb];
-                insertButtonLink  = About_Cards_Data[resume_link];
-                
-            }
-            
-        }
+    }
         
         function DisplayContactPage()
         {
             console.log("Contact Page");
             
-            let constactForm = document.getElementById("contactForm");
+            
             let buttonSubmit = document.getElementById("input_submit");
             let buttonClear = document.getElementById("input_clear");
             
-             buttonSubmit.onsubmit = SendToConsole();
+            
 
             function SendToConsole()
             { 
-                console.log(FormData(constactForm));
+                setInterval(document.querySelector('form').addEventListener(buttonSubmit.onsubmit, e => {
+                    
+                    let formInput = new FormData([e.target]);
+                    console.log(formInput);
+                }), 3000);
+                
                 
             }
-        
+
+            
         }
  
     // named function option
