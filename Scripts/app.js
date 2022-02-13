@@ -266,7 +266,7 @@
     {
         console.log('nav: "Products" changed to "Projects"');
         let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
-        let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Project </a>');
+        let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Projects </a>');
         navBarTarget.innerHTML = insertText.textContent;
         console.log(navBarTarget);
     }
