@@ -40,9 +40,7 @@
 
 
         // Step 4 - perform insertion
-        MainDivHeading.after(HeroImage);
         HeroImage.after(HeroParagraph);
-        console.log(HeroParagraph);
 
         //DocumentBodyInsert.appendChild(MainDivContainer);
 
