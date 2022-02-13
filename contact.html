@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
     <!--CSS SECTION-->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="./Content/app.css">
-</head>
-<body>
-  <header>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Content/app.css" />
+  </head>
+  <body>
+    <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand " href="./index.html"><i class="fas fa-user-secret"></i> WEBD6201</a>
@@ -67,12 +73,88 @@
             </div>
           </form>
         </div>
+      </nav>
+    </header>
+
+    <main class="container justify-content-center align-items-center">
+      <h1 class="mb-5 text-center">Contact Us</h1>
+      <div class="container">
+        <form action="onsubmit()" id="contactForm" class="form form-group col-8 m-auto">
+          <div class="mb-3 form-group row">
+            <label for="input_name" class="sr-only form-control-sm col"
+              >Name:</label
+            >
+            <input
+              type="text"
+              class="col-sm-11 form-control"
+              name="Name"
+              id="input_name"
+              placeholder="Name:"
+            />
+          </div>
+          <div class="mb-3 form-group row">
+            <label for="input_number" class="sr-only form-control-sm col"
+              >Phone Number:</label
+            >
+            <input
+              type="tel"
+              class="col form-control"
+              name="Phone"
+              id="input_number"
+              placeholder="Phone Number:"
+            />
+          </div>
+          <div class="mb-3 form-group row">
+            <label for="input_email" class="sr-only form-control-sm col"
+              >E-mail Address:</label
+            >
+            <input
+              type="email"
+              class="col form-control"
+              name="Email"
+              id="input_email"
+              placeholder="E-mail Address:"
+            />
+          </div>
+          <div class="mb-3 form-group row">
+            <label for="input_message" class="sr-only form-control-sm col"
+              >Comment:</label
+            >
+            <input
+              type="text"
+              class="col form-control"
+              name="Comment"
+              id="input_message"
+              placeholder="Comment:"
+            />
+          </div>
+          <div class="mb-3 form-group row-cols-6">
+            <input
+              type="reset"
+              value="Clear"
+              id="input_clear"
+              class="btn col"
+            /><input
+              type="submit"
+              value="Submit"
+              id="input_submit"
+              class="btn col"
+            />
+          </div>
+        </form>
+      </div>
     </main>
-    <footer class="footer fixed-bottom">&nbsp;&nbsp;&copy<span id="copyYear"></span><script> let date = new Date(); document.getElementById("copyYear").innerHTML = date.getFullYear();</script></footer>
- <!--SCRIPTING SECTION-->
+    <footer class="footer fixed-bottom">
+      &nbsp;&nbsp;&copy<span id="copyYear"></span>
+      <script>
+        let date = new Date();
+        document.getElementById("copyYear").innerHTML = date.getFullYear();
+      </script>
+    </footer>
+    <!--SCRIPTING SECTION-->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./Scripts/contact.js"></script>
     <script src="./Scripts/app.js"></script>
-</body>
+  </body>
 </html>

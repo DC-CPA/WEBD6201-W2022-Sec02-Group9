@@ -169,7 +169,8 @@
         ];
 
         //Insert the title text
-          Header_About_Header = document.getElementsByTagName("h1").textContent;
+         let titleH1 = document.getElementsByTagName("h1")[0];
+         titleH1.innerHTML = Header_About_Header;  
 
         // Get the entry location for elements for cards
         let insertTitle = document.getElementsByClassName("card-title");
@@ -177,39 +178,30 @@
         let insertGitHubLink = document.getElementsByClassName("card-github");
         let insertButtonLink = document.getElementsByClassName("card-button");
 
-        // Loop through to insert the data to each
-        for (let index = 0; index < About_Cards_Data; index++) {
-            
-            
-                insertTitle.textContent = About_Cards_Data[Name];
-                insertGitHubLink = About_Cards_Data[Github];
-                insertText = About_Cards_Data[blurb];
-                insertButtonLink  = About_Cards_Data[resume_link];
-                
-            }
-            
-        }
-        
-        function DisplayContactPage()
+    }
+
+    function DisplayContactPage()
+    {
+        console.log("Contact Page");            
+
+        let input_submit = document.getElementById("input_submit");
+
+        input_submit.addEventListener("click", function(event)
         {
-            console.log("Contact Page");            
+            event.preventDefault();
+            
+            let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
+            console.log(contact.toString() + "\nMessage:        " + document.getElementById("message").value);
 
-            let input_submit = document.getElementById("input_submit");
-    
-            input_submit.addEventListener("click", function(event)
+            setTimeout(function()
             {
-                event.preventDefault();
-                
-                let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
-                console.log(contact.toString() + "\nMessage:        " + document.getElementById("message").value);
+                window.location.href = "index.html";              
+            }, 3000);
 
-                setTimeout(function()
-                {
-                    window.location.href = "index.html";              
-                }, 3000);
+        });        
+            
+    }
 
-            });        
-        }
  
     // named function option
     function Start() 
