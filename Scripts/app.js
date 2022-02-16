@@ -166,7 +166,7 @@ class User {
             {
                 Name: "Katherine Bellman",
                 Github: "https://github.com/Tsukiyomi-Inari",
-                blurb: "I am Katherine Bellman, studying Computer Programming and Analysis at Durham College in Oshawa. As an Alumni of OCAD University, I apply creative solutions to computational problems and design attractive user interfaces through colour theory practices.\n	Continuous refinement has aided in organization and time management, being my most vital asset within a team. I am looking for a position in web development or system development to contribute to our community.",
+                blurb: "I am Katherine Bellman, studying Computer Programming and Analysis at Durham College in Oshawa. As an Alumni of OCAD University, I apply creative solutions to computational problems and design attractive user interfaces through colour theory practices.",
                 resume_link: "https://dconline-my.sharepoint.com/:b:/g/personal/katherine_bellman_dcmail_ca/EcraWZsK4R5Bo2UXGh91c8MBl_12pDZ66gjbi2QhUquLtg?e=KcHZhB", 
             },
         ];

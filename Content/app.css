@@ -118,7 +118,16 @@ form{
 }
 
 .card-github {
-    color:#422e55;
+    text-align: center ;
+}
+.fa-github{
+    color: #422e55;
+    font-size: 1.5em;
+}
+
+.fa-codepen{
+    color: #422e55;
+    font-size: 1.95em;
 }
 
 /* Image Styling */
