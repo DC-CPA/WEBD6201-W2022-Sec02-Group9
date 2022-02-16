@@ -4,6 +4,17 @@
  *  @version    1
  *              JavaScript file for injecting behaviour into our website.
  */
+
+class User {
+  constructor(firstName, lastName, username, email, password) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.username = username;
+      this.email = email;
+      this.password = password;
+  }
+}
+
 // IIFE -- Immediately Invoked Function Expression
 // AKA -- Anonymous Self-Executing Function
 (function()
@@ -199,9 +210,49 @@
 
     }
 
+    /**
+     *
+     *
+     * @param {*} inputId
+     * @param {*} regular_expression
+     * @param {*} error_message
+     */
+    function ValidateInput(inputId, regular_expression, error_message)
+    {
+        let messageSpace = $("#messageArea").hide();
+
+        $("#" + inputId).on('blur', function()
+        {
+            let text_value = $(this).val();
+            if(!regular_expression.test(text_value))
+            {
+                $(this).trigger('focus').trigger("select");
+                messageSpace.addClass("alert alert-danger").text(error_message).show();
+            }
+            else
+            {
+                messageSpace.removeAttr("class").hide();
+            }
+        });
+    }
+
+    /**
+     *
+     *Function that executes the main validation field
+     */
+    function ContactFormValidation()
+    {
+        ValidateInput("fullName", /^([A-Z][a-z]{1,3}.?\s)?([A-Z][a-z]{1,})((\s|,|-)([A-Z][a-z]{1,}))*(\s|,|-)([A-Z][a-z]{1,})$/, "Please enter a valid full name with both first and last name begining with a capital letter.");
+        ValidateInput("phoneNumber", /^(\+\d{1,3}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, "Please enter a valid phone number. Example (416) 555-5555");
+
+        ValidateInput("email", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please enter a valid E-mail Address.")
+    }
+
     function DisplayContactPage()
     {
         console.log("Contact Page");            
+
+        ContactFormValidation();
 
         let input_submit = document.getElementById("input_submit");
 
@@ -253,7 +304,7 @@
         }        
     }
 
-
+    
     function changeNav()
     {
         console.log('nav: "Products" changed to "Projects"');
