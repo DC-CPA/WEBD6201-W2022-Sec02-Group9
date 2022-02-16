@@ -55,8 +55,21 @@
       <br/>
       <br/>
       <h1 class="mb-5">--</h1>
-
-      <button id="AboutUsButton" class="btn btn-primary">--</button>
+   <div class="container">
+        <form action="" id="contactForm" class="form form-group col-6 m-auto ">
+          <div class="mb-3 form-group row ">
+            <label for="fullName" class="sr-only form-control-sm  col ">User ID</label>
+              <input type="text" class=" col-sm-11 form-control " name="login_userID" id="login_userID" placeholder="User ID" required>
+          </div>
+            <div class="mb-3 form-group row ">
+              <label for="login_pass" class="sr-only form-control-sm  col ">Password</label>
+                <input type="password" class="col form-control" name="login_password" id="login_pass" placeholder="Password" required>
+              </div>
+            <div class="mb-3 form-group row-cols-6">
+              <button id="login_submit" type="submit" class="btn col"><i class="fas fa-key"></i>Login</button>
+            </div>
+        </form>
+      </div>
     </main>
     <!--END MAIN CONTENT BODY-->
 <!--FOOTER-->
