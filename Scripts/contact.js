@@ -7,31 +7,61 @@
  class Contact
  {
      // Public Properties
+     /**
+      * Get function of name
+      *
+      * @memberof Contact
+      */
      get FullName()
      {
          return this.m_fullName;
      }
  
+     /**
+      * Set function of name
+      *
+      * @memberof Contact
+      */
      set FullName(fullName)
      {
          this.m_fullName = fullName;
      }
  
+     /**
+      * Get function of number
+      *
+      * @memberof Contact
+      */
      get ContactNumber()
      {
          return this.m_contactNumber;
      }
  
+     /**
+      * Set function of number
+      *
+      * @memberof Contact
+      */
      set ContactNumber(contactNumber)
      {
          this.m_contactNumber = contactNumber;
      }
  
+     /**
+      * Get function of email
+      *
+      * @memberof Contact
+      */
      get EmailAddress()
      {
          return this.m_emailAddress;
      }
  
+     /**
+      * Set function of email
+      *
+      * @memberof Contact
+      */
      set EmailAddress(emailAddress)
      {
          this.m_emailAddress = emailAddress;

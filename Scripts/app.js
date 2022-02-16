@@ -20,7 +20,7 @@ class User {
 (function()
 {
     
-
+    // Called when viewing the home page
     function DisplayHomePage()
     {
         // Name of button and id are same... this is a naming convention. Button is actually an 'html element'
@@ -57,6 +57,7 @@ class User {
 
     }
 
+    // Called when viewing the projects page
     function DisplayProjectsPage()
     {
         console.log("Projects Page");
@@ -87,6 +88,7 @@ class User {
 
     }
 
+    // Called when viewing the services page
     function DisplayServicesPage()
     {
         console.log("Services Page");
@@ -148,6 +150,7 @@ class User {
         serviceRW2.innerHTML = Russel_Services[2].Service;
     }
 
+    // Called when viewing the about page
     function DisplayAboutPage()
     {
         console.log("About Page");
@@ -172,12 +175,6 @@ class User {
          let titleH1 = document.getElementsByTagName("h1")[0];
          titleH1.innerHTML = Header_About_Header;  
 
-        // Get the entry location for elements for cards
-        // let insertTitle = document.getElementsByClassName("card-title");
-        // let insertText = document.getElementsByClassName("card-text");
-        // let insertGitHubLink = document.getElementsByClassName("card-github");
-        // let insertButtonLink = document.getElementsByClassName("card-button");
-
         document.getElementsByClassName("card-title")[0].innerHTML = About_Cards_Data[0].Name;
         //document.getElementsByClassName("card-github")[0].innerHTML = About_Cards_Data[0].Github;
         document.getElementsByClassName("card-text")[0].innerHTML = About_Cards_Data[0].blurb;
@@ -187,6 +184,7 @@ class User {
 
         console.log(russell_resume.getAttribute("href"));
 
+        // Waring resume link
         let russell_button = document.getElementsByClassName("btn")[0];
         russell_button.addEventListener("click", function()
         {
@@ -202,6 +200,7 @@ class User {
 
         console.log(bellman_resume.getAttribute("href"));
 
+        // Bellman resume link
         let bellman_button = document.getElementsByClassName("btn")[1];
         bellman_button.addEventListener("click", function()
         {
@@ -256,13 +255,17 @@ class User {
 
         let input_submit = document.getElementById("input_submit");
 
+        // Listens for submit button to click
         input_submit.addEventListener("click", function(event)
         {
+            // Prevents default behaviour
             event.preventDefault();
             
+            // Writes contact info to console
             let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
             console.log(contact.toString() + "\nMessage:        " + document.getElementById("message").value);
 
+            // Timer triggered when form submit is clicked
             setTimeout(function()
             {
                 window.location.href = "index.html";              
@@ -273,7 +276,7 @@ class User {
     }
 
  
-    // named function option
+    // Start function called upon the website loading
     function Start() 
     {
         console.log("App Started!");
@@ -314,6 +317,7 @@ class User {
         console.log(navBarTarget);
     }
 
+    // Function for inserting nav bar link between other elements of nav bar
     function insertHumanResources()
     {
         let navBarTarget = document.body.getElementsByClassName("nav-item")[4];
