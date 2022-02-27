@@ -58,24 +58,20 @@
       <div class="container">
         <form action="" id="contactForm" class="form form-group col-6 m-auto ">
           <div class="mb-3 form-group row ">
-            <label for="fullName" class="sr-only form-control-sm  col ">Name:</label>
-              <input type="text" class=" col-sm-11 form-control " name="fullName" id="fullName" placeholder="Name:">
+              <input type="text" class=" col form-control " name="firstName" id="firstName" placeholder="First Name"> &nbsp;&nbsp;
+              <input type="text" class="col form-control" name="lastName" id="lastName" placeholder="Last Name">
           </div>
-            <div class="mb-3 form-group row ">
-              <label for="contactNumber" class="sr-only form-control-sm  col ">Phone Number:</label>
-                <input type="tel" class="col form-control" name="contactNumber" id="contactNumber" placeholder="Phone Number:">
-              </div>
             <div class="mb-3 form-group row">
-              <label for="emailAddress" class="sr-only form-control-sm  col ">E-mail Address:</label>
-                <input type="email" class="col form-control" name="emailAddress" id="emailAddress" placeholder="E-mail Address:">
+                <input type="email" class="col form-control" name="emailAddress" id="emailAddress" placeholder="E-mail">
             </div>
             <div class="mb-3 form-group row">
-              <label for="message" class="sr-only form-control-sm  col ">Comment:</label>
-                <input type="text" class="col form-control" name="message" id="message" placeholder="Comment:">
+                <input type="text" class="col form-control" name="message" id="message" placeholder="Password">
             </div>
-            <div class="mb-3 form-group row-cols-6">
-              <button id="input_clear" type="reset" class="btn col"><i class="fas fa-undo fa-lg"></i> Clear</button>
-              <button id="input_submit" type="submit" class="btn col"><i class="fas fa-envelope fa-lg"></i> Submit</button>
+            <div class="mb-3 form-group row">
+              <input type="text" class="col form-control" name="message" id="message" placeholder="Confirm Password">
+          </div>
+            <div class="mb-3 form-group row-cols-7">
+              <button id="input_submit" type="submit" class="btn col">Register</button>
             </div>
         </form>
       </div>
