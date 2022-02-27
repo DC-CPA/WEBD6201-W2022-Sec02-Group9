@@ -247,6 +247,16 @@ class User {
         ValidateInput("email", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please enter a valid E-mail Address.")
     }
 
+        function displayLoginPage()
+    {
+        console.log("Login Page");
+    }
+
+    function displayRegisterPage()
+    {
+        console.log("Register Page");
+    }
+
     function DisplayContactPage()
     {
         console.log("Contact Page");            
@@ -303,6 +313,12 @@ class User {
                 break;
             case "Contact Us":
                 DisplayContactPage();
+                break;
+            case "Login":
+                displayLoginPage();
+                break;
+            case "Register":
+                displayRegisterPage();
                 break;
         }        
     }
