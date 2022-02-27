@@ -56,18 +56,19 @@
       <br/>
       <h1 class="mb-5">--</h1>
    <div class="container">
-        <form action="" id="contactForm" class="form form-group col-6 m-auto ">
-          <div class="mb-3 form-group row ">
-            <label for="fullName" class="sr-only form-control-sm  col ">User ID</label>
-              <input type="text" class=" col-sm-11 form-control " name="login_userID" id="login_userID" placeholder="User ID" required>
+        <form action="" id="contactForm" class="form form-group m-auto col-6">
+          <div class="input-group mb-3 row">
+            <span class="input-group-text" id="user_input"><i class="fas fa-user"></i></span>
+              <input type="text" class="form-control" name="login_userID" id="login_userID" placeholder="Enter your username" required aria-describedby="user_input">
           </div>
-            <div class="mb-3 form-group row ">
-              <label for="login_pass" class="sr-only form-control-sm  col ">Password</label>
-                <input type="password" class="col form-control" name="login_password" id="login_pass" placeholder="Password" required>
+            <div class="mb-3 input-group row">
+              <span class="input-group-text" id="login_pass"><i class="fas fa-lock"></i></span>
+                <input type="password" class=" form-control" name="login_password" id="login_pass" placeholder="Enter your password" required aria-describedby="login_pass">
               </div>
-            <div class="mb-3 form-group row-cols-6">
-              <button id="login_submit" type="submit" class="btn col"><i class="fas fa-key"></i>Login</button>
+            <div class="mb-3s">
+              <button id="login_submit" type="submit" class="btn col">Login</button>
             </div>
+            <div>Don't have an account? <a href="./register.html">Register here!</a></div>
         </form>
       </div>
     </main>

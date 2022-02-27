@@ -57,20 +57,22 @@
       <h1 class="mb-5">--</h1>
       <div class="container">
         <form action="" id="registerForm" class="form form-group col-6 m-auto ">
-          <div class="mb-3 form-group-row row ">
+          <p>Create your own account. It's free and only takes a minute.</p>
+          <div class="mb-3  input-group row align-items-center">
             <label for="fullName" class="sr-only form-control-sm  col ">First Name:</label>
-              <input type="text" class=" col-sm-11 form-control " name="fullName" id="fullName" placeholder="First Name">
-                  <label for="fullName" class="sr-only form-control-sm  col ">Last Name:</label>
-              <input type="text" class=" col-sm-11 form-control " name="fullName" id="fullName" placeholder="Last Name">
+              <input type="text" class=" col-sm-12 form-control rounded" name="fullName" id="fullName" placeholder="First Name">
+                  &nbsp;&nbsp;<label for="fullName" class="sr-only form-control-sm  col ">Last Name:</label>
+              <input type="text" class=" col-sm-12 form-control rounded" name="fullName" id="fullName" placeholder="Last Name">
           </div>
             <div class="mb-3 form-group row">
                 <input type="email" class="col form-control" name="emailAddress" id="emailAddress" placeholder="E-mail">
             </div>
-            <div><label for=""></label> <input type="text"> </div>
+            <div class="mb-3 form-group row"><label for="password" class="sr-only form-control-sm  col ">Password:</label> <input type="password" class="col-sm-11 form-control" name="password" id="regPass" placeholder="Password"></div>
+            <div class="mb-3 form-group row"><label for="password2" class="sr-only form-control-sm  col ">Confirm Password:</label> <input type="password" class="col-sm-11 form-control" name="password2" id="regPass2" placeholder="Confirm Password"></div>
             <div class="mb-3 form-group row-cols-6">
-              <button id="input_register" type="submit" class="btn col"> Register</button>
+              <button id="input_register" type="submit" class="btn col"> Register </button>
             </div>
-            <div>Already have an account? <link rel="stylesheet" href=""></div>
+            <div>Already have an account? <a href="./login.html">Sign-in</a></div>
         </form>
       </div>
     </main>
