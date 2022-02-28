@@ -250,6 +250,17 @@ class User {
         function displayLoginPage()
     {
         console.log("Login Page");
+        // id for login button login_submit
+         let LoginSubmitButton = document.getElementById("login_submit");
+        LoginSubmitButton.addEventListener("click", function(event)
+        {
+            let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
+            let insertUserName  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Projects </a>');
+            //navBarTarget.innerHTML = insertUserName.textContent;
+            //console.log(navBarTarget);
+        });
+
+        //<span class="navbar-text">text thing here <\ span>   <--  navbar-text class thingy 
     }
 
     function displayRegisterPage()
