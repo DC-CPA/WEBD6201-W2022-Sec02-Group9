@@ -13,6 +13,18 @@ class User {
       this.email = email;
       this.password = password;
   }
+
+  
+
+    // Public Override
+    /**
+     * toString override that formats the user object info
+     * @returns Formatted user info
+     */
+  toString()
+  {
+      return `First Name: ${this.firstName}\nLast Name: ${this.lastName}\nUser Name: ${this.username}\nEmail Address: ${this.email}\nPassword: ${this.password}`;
+  }
 }
 
 // IIFE -- Immediately Invoked Function Expression
@@ -271,6 +283,14 @@ class User {
     function displayRegisterPage()
     {
         console.log("Register Page");
+
+        // Prevents default behaviour
+        event.preventDefault();
+
+        //Utilizes the User class to create new instances of "User"
+        let registerNew = new User(firstName.value, lastName.value, username.value, email.value, password.value);
+
+
     }
 
     function DisplayContactPage()
