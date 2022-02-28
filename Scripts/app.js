@@ -14,7 +14,7 @@ class User {
       this.password = password;
   }
 
-  
+
 
     // Public Override
     /**
