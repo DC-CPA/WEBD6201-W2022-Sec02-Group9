@@ -252,13 +252,18 @@ class User {
         console.log("Login Page");
         // id for login button login_submit
          let LoginSubmitButton = document.getElementById("login_submit");
-        LoginSubmitButton.addEventListener("click", function(event)
-        {
-            let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
-            let insertUserName  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Projects </a>');
-            //navBarTarget.innerHTML = insertUserName.textContent;
-            //console.log(navBarTarget);
-        });
+         let navBarTarget = document.body.getElementsByClassName("nav-item")[6];
+         let InputUserName = $("user_input").val();
+         $(LoginSubmitButton).on({
+             click: function(){
+                //populate the user name into nav bar as navbar-text class item
+                $(navBarTarget).insertAfter('<span class="navbar-text">'+ InputUserName +'</ span>')
+             }
+         })
+/* 
+            let insertUserName  = document.createTextNode('<span class="navbar-text">${}</ span>');
+            $(navBarTarget).insertAfter(insertUserName); */
+
 
         //<span class="navbar-text">text thing here <\ span>   <--  navbar-text class thingy 
     }
