@@ -230,7 +230,7 @@ class User {
      */
     function ValidateInput(inputId, regular_expression, error_message)
     {
-        let messageSpace = $("#messageArea").hide();
+        let messageSpace = $("#ErrorMessage").hide();
 
         $("#" + inputId).on('blur', function()
         {
@@ -255,42 +255,110 @@ class User {
     {
         ValidateInput("fullName", /^([A-Z][a-z]{1,3}.?\s)?([A-Z][a-z]{1,})((\s|,|-)([A-Z][a-z]{1,}))*(\s|,|-)([A-Z][a-z]{1,})$/, "Please enter a valid full name with both first and last name begining with a capital letter.");
         ValidateInput("phoneNumber", /^(\+\d{1,3}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, "Please enter a valid phone number. Example (416) 555-5555");
-
         ValidateInput("email", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please enter a valid E-mail Address.")
     }
 
-        function displayLoginPage()
+    // function changeNavLogin()
+    // {
+    //     console.log('name injection');
+    //     let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
+    //     let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Projects </a>');
+    //     navBarTarget.innerHTML = insertText.textContent;
+    //     console.log(navBarTarget);
+    // }
+
+    function AddUserName(fullName)
+    {
+        $("li:nth-of-type(6)").after(`
+        <li class="nav-item">
+            <a class="nav-link">${fullName}</a>
+        </li>
+        `);
+    }
+
+
+    function DisplayLoginPage()
     {
         console.log("Login Page");
         // id for login button login_submit
-         let LoginSubmitButton = document.getElementById("login_submit");
-         let navBarTarget = document.body.getElementsByClassName("nav-item")[6];
-         let InputUserName = $("user_input").val();
-         $(LoginSubmitButton).on({
-             click: function(){
-                //populate the user name into nav bar as navbar-text class item
-                $(navBarTarget).insertAfter('<span class="navbar-text">'+ InputUserName +'</ span>')
-             }
-         })
-/* 
-            let insertUserName  = document.createTextNode('<span class="navbar-text">${}</ span>');
-            $(navBarTarget).insertAfter(insertUserName); */
 
+         let login_submit = document.getElementById("login_submit");
 
-        //<span class="navbar-text">text thing here <\ span>   <--  navbar-text class thingy 
+         $("h1").replaceWith(`<h1 class="mb-3">Login Page<h1>`);
+
+         // Listens for submit button to click
+         login_submit.addEventListener("click", function(event)
+         {
+             // Prevents default behaviour
+             event.preventDefault();
+             
+             // Writes contact info to console
+            //let userName = $("#login_userID").innerHTML();
+
+            let userName = document.getElementById("login_userID").value;
+
+            console.log(userName);
+
+            AddUserName(userName);
+        });        
     }
 
-    function displayRegisterPage()
+
+    function RegisterFormValidation()
+    {
+        ValidateInput("firstName", /^([A-Z][a-z]{1,})$/, "User first name must begin with a capital, and may only be one name in length.");
+        ValidateInput("lastName", /^([A-Z][a-z]{1,})$/, "User last name must begin with a capital, and may only be one name in length.");
+        ValidateInput("regPass", /^(.{6,})$/, "Password must be 6 characters in length");
+        ValidateInput("regPass2", /^(.{6,})$/, "Password must be 6 characters in length");
+        // if(!(document.getElementById("regPass").value == document.getElementById("regPass2")))
+        // {
+        //     let messageSpace = $("#ErrorMessage").hide();
+        //     //alert("Password must be the same");
+        //     document.getElementById("regPass2").focus().trigger("select");            
+            
+        //     messageSpace.addClass("alert alert-danger").text(`Password must be the same!!!!`).show();
+        // }
+        // else
+        // {
+        //     messageSpace.removeAttr("class").hide();
+        // }      
+        
+        ValidateInput("email", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please enter a valid E-mail Address.")
+    };
+
+
+    function DisplayRegisterPage()
     {
         console.log("Register Page");
 
+        $("h1").replaceWith(`<h1 class="mb-3">Registration Page<h1>`);
+
+        RegisterFormValidation();
+
+        let input_register = document.getElementById("input_register");
+
+        input_register.addEventListener("click", function(event)
+        {
+            // Prevents default behaviour
+            event.preventDefault();
+            
+            // Writes contact info to console
+            //let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
+            //console.log(contact.toString() + "\nMessage:        " + document.getElementById("message").value);
+
+        }); 
+
         // Prevents default behaviour
-        event.preventDefault();
+        //event.preventDefault();
 
         //Utilizes the User class to create new instances of "User"
-        let registerNew = new User(firstName.value, lastName.value, username.value, email.value, password.value);
+        //let registerNew = new User(firstName.value, lastName.value, username.value, email.value, password.value);
 
-
+        // let firstName = document.getElementById("firstName").value;
+        // let lastName = document.getElementById("lastName").value;
+        // let emailAddress = document.getElementById("emailAddress").value;
+        // let regPass = document.getElementById("regPass").value;
+        // let regPass2 = document.getElementById("regPass2").value;
     }
 
     function DisplayContactPage()
@@ -351,10 +419,10 @@ class User {
                 DisplayContactPage();
                 break;
             case "Login":
-                displayLoginPage();
+                DisplayLoginPage();
                 break;
             case "Register":
-                displayRegisterPage();
+                DisplayRegisterPage();
                 break;
         }        
     }

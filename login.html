@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Login</title>
     <link rel="shortcut icon" type="image/svg" href="./Assets/site_icon_fas_user-secret.svg">
     <!--CSS SECTION-->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -58,21 +58,21 @@
       <br/>
       <br/>
       <!-- Validation message -->
-      <div id="messageArea">Sample Message</div>
+      <div id="messageArea"></div>
 
       <h1 class="mb-5">--</h1>
-   <div class="container">
+      <div class="container">
         <form action="" id="contactForm" class="form form-group m-auto col-6">
           <div class="input-group mb-3 row ">
             <span class="input-group-text" id="user_input"><i class="fas fa-user"></i></span>
-              <input type="text" class="form-control" name="login_userID" id="login_userID" placeholder="Enter your username" required aria-describedby="user_input">
+              <input type="text" class="form-control" name="login_userID" id="login_userID" placeholder="Enter your username">
           </div>
             <div class="mb-3 input-group row">
               <span class="input-group-text" id="login_pass"><i class="fas fa-lock"></i></span>
-                <input type="password" class=" form-control" name="login_password" id="login_pass" placeholder="Enter your password" required aria-describedby="login_pass">
+                <input type="password" class=" form-control" name="login_password" id="login_pass" placeholder="Enter your password">
               </div>
             <div class="mb-3s">
-              <button id="login_submit" type="submit" class="btn col">Login</button>
+              <button id="login_submit" type="submit" class="btn col mb-3">Login</button>
             </div>
             <div>Don't have an account? <a href="./register.html">Register here!</a></div>
         </form>
