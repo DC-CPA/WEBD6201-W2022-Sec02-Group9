@@ -267,7 +267,8 @@ class User {
          let navBarTarget = document.body.getElementsByClassName("nav-item")[6];
          let InputUserName = $("user_input").val();
          $(LoginSubmitButton).on({
-             click: function(){
+             click: function(e){
+                 e.preventDefault();
                 //populate the user name into nav bar as navbar-text class item
                 $(navBarTarget).insertAfter('<span class="navbar-text">'+ InputUserName +'</ span>')
              }
@@ -275,7 +276,7 @@ class User {
 /* 
             let insertUserName  = document.createTextNode('<span class="navbar-text">${}</ span>');
             $(navBarTarget).insertAfter(insertUserName); */
-         
+
         //<span class="navbar-text">text thing here <\ span>   <--  navbar-text class thingy 
     }
 
