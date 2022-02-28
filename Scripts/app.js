@@ -14,7 +14,7 @@ class User {
       this.password = password;
   }
 
-  
+
 
     // Public Override
     /**
@@ -275,8 +275,7 @@ class User {
 /* 
             let insertUserName  = document.createTextNode('<span class="navbar-text">${}</ span>');
             $(navBarTarget).insertAfter(insertUserName); */
-
-
+         
         //<span class="navbar-text">text thing here <\ span>   <--  navbar-text class thingy 
     }
 
@@ -290,7 +289,7 @@ class User {
         //Utilizes the User class to create new instances of "User"
         let registerNew = new User(firstName.value, lastName.value, username.value, email.value, password.value);
 
-
+        S
     }
 
     function DisplayContactPage()
