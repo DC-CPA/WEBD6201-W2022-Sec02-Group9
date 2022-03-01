@@ -4,29 +4,6 @@
  *  @version    1
  *              JavaScript file for injecting behaviour into our website.
  */
-
-class User {
-  constructor(firstName, lastName, username, email, password) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.username = username;
-      this.email = email;
-      this.password = password;
-  }
-
-
-
-    // Public Override
-    /**
-     * toString override that formats the user object info
-     * @returns Formatted user info
-     */
-  toString()
-  {
-      return `First Name: ${this.firstName}\nLast Name: ${this.lastName}\nUser Name: ${this.username}\nEmail Address: ${this.email}\nPassword: ${this.password}`;
-  }
-}
-
 // IIFE -- Immediately Invoked Function Expression
 // AKA -- Anonymous Self-Executing Function
 (function()
@@ -222,7 +199,7 @@ class User {
     }
 
     /**
-     *
+     * This method validates an input text field in the form and displays an error in the message.
      *
      * @param {*} inputId
      * @param {*} regular_expression
@@ -246,6 +223,50 @@ class User {
             }
         });
     }
+
+
+    /**
+     * Function for validating password
+     */
+    function ValidatePassword(password, confirmPassword)
+    {
+        let messageSpace = $("#ErrorMessage").hide();
+
+        $("#" + password).on("blur", function ()
+        {
+            let password_value = $(this).val();
+            if (password_value.length < 6)
+            {
+                $(this).trigger('focus');
+                messageSpace.addClass("alert alert-danger").text("Password must be greater than 6 characters").show();
+            }
+            else
+            {
+                messageSpace.removeAttr("class").hide();
+            }
+        });
+
+        $("#" + confirmPassword).on("blur", function ()
+        {
+            let password = $("#password").val();
+
+            let confirmPassword_value = $(this).val();
+            if(password.length < 1)
+            {
+                $(this).trigger('focus').trigger("select");
+                messageSpace.addClass("alert alert-danger").text("The password is empty").show();
+            }
+            else if(confirmPassword_value != password)
+            {
+                $(this).trigger('focus').trigger("select");
+                messageSpace.addClass("alert alert-danger").text("Confirm password input must match password input").show();
+            }
+            else
+            {
+                messageSpace.removeAttr("class").hide();
+            }
+        });
+    }   
 
     /**
      *
@@ -271,7 +292,7 @@ class User {
     {
         $("li:nth-of-type(6)").after(`
         <li class="nav-item">
-            <a class="nav-link">${fullName}</a>
+            <a class="nav-link">| ${fullName} |</a>
         </li>
         `);
     }
@@ -300,6 +321,10 @@ class User {
             console.log(userName);
 
             AddUserName(userName);
+
+            $("#login").replaceWith("<a class=\"nav-link\" id=\"login\" href=\"./login.html\"><i class=\"fas fa-clipboard-check\"></i> Logout</a>");
+            //<a class="nav-link" id="login" href="./login.html"><i class="fas fa-clipboard-check"></i> Login</a>
+            
         });        
     }
 
@@ -308,57 +333,57 @@ class User {
     {
         ValidateInput("firstName", /^([A-Z][a-z]{1,})$/, "User first name must begin with a capital, and may only be one name in length.");
         ValidateInput("lastName", /^([A-Z][a-z]{1,})$/, "User last name must begin with a capital, and may only be one name in length.");
-        ValidateInput("regPass", /^(.{6,})$/, "Password must be 6 characters in length");
-        ValidateInput("regPass2", /^(.{6,})$/, "Password must be 6 characters in length");
-        // if(!(document.getElementById("regPass").value == document.getElementById("regPass2")))
-        // {
-        //     let messageSpace = $("#ErrorMessage").hide();
-        //     //alert("Password must be the same");
-        //     document.getElementById("regPass2").focus().trigger("select");            
-            
-        //     messageSpace.addClass("alert alert-danger").text(`Password must be the same!!!!`).show();
-        // }
-        // else
-        // {
-        //     messageSpace.removeAttr("class").hide();
-        // }      
         
-        ValidateInput("email", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please enter a valid E-mail Address.")
+        ValidatePassword("password", "confirmPassword");
+        ValidateInput("emailAddress", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please enter a valid E-mail Address.")
     };
 
 
     function DisplayRegisterPage()
     {
-        console.log("Register Page");
+        console.log("Register Page");          
 
         $("h1").replaceWith(`<h1 class="mb-3">Registration Page<h1>`);
 
+        $(".hint-text").text(`Create your own account. It's free and only takes a minute.`);
+        $("p.text-center").append(`Already have an account? <a href="login.html">Sign in</a>`);
+
         RegisterFormValidation();
 
-        let input_register = document.getElementById("input_register");
+        let submitButton = document.getElementById("submitButton");
 
-        input_register.addEventListener("click", function(event)
+        // Listens for submit button to click
+        submitButton.addEventListener("click", function(event)
         {
             // Prevents default behaviour
             event.preventDefault();
+            if(firstName.value == "" || lastName.value == "" || emailAddress.value == "" || password.value == "")
+            {
+                let messageSpace = $("#ErrorMessage").hide();
+                messageSpace.addClass("alert alert-danger").text("A field entry was left empty").show(); 
+
+                setTimeout(function()
+                {                       
+                    messageSpace.removeAttr("class").hide();         
+                }, 5000);
+            }
+            else
+            {
+                // Writes contact info to console
+                let contact = new User(firstName.value, lastName.value, emailAddress.value, password.value);
+                console.log(contact.toString());
+
+                //Timer triggered when form submit is clicked
+                setTimeout(function()
+                {
+                    window.location.href = "login.html";              
+                }, 5000);
+            }
+
+
+
             
-            // Writes contact info to console
-            //let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
-            //console.log(contact.toString() + "\nMessage:        " + document.getElementById("message").value);
-
-        }); 
-
-        // Prevents default behaviour
-        //event.preventDefault();
-
-        //Utilizes the User class to create new instances of "User"
-        //let registerNew = new User(firstName.value, lastName.value, username.value, email.value, password.value);
-
-        // let firstName = document.getElementById("firstName").value;
-        // let lastName = document.getElementById("lastName").value;
-        // let emailAddress = document.getElementById("emailAddress").value;
-        // let regPass = document.getElementById("regPass").value;
-        // let regPass2 = document.getElementById("regPass2").value;
+        });   
     }
 
     function DisplayContactPage()
@@ -430,7 +455,7 @@ class User {
     
     function changeNav()
     {
-        console.log('nav: "Products" changed to "Projects"');
+        //console.log('nav: "Products" changed to "Projects"');
         let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
         let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Projects </a>');
         navBarTarget.innerHTML = insertText.textContent;
