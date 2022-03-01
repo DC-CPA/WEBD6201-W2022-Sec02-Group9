@@ -1,3 +1,9 @@
+/** contact.js
+ *  @authors    Katherine Bellman, Russell Waring
+ *  @since      2022.02.24
+ *  @version    1
+ *              JavaScript file for collecting and outputting user data to the console.
+ */
 class User
 {
     // Public Properties

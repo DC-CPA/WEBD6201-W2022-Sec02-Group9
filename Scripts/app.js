@@ -41,9 +41,6 @@
 
         // Step 4 - perform insertion
         HeroImage.after(HeroParagraph);
-
-        //DocumentBodyInsert.appendChild(MainDivContainer);
-
     }
 
     // Called when viewing the projects page
@@ -161,8 +158,8 @@
         ];
 
         //Insert the title text
-         let titleH1 = document.getElementsByTagName("h1")[0];
-         titleH1.innerHTML = Header_About_Header;  
+        let titleH1 = document.getElementsByTagName("h1")[0];
+        titleH1.innerHTML = Header_About_Header;  
 
         document.getElementsByClassName("card-title")[0].innerHTML = About_Cards_Data[0].Name;
         //document.getElementsByClassName("card-github")[0].innerHTML = About_Cards_Data[0].Github;
@@ -195,7 +192,6 @@
         {
             location.href = bellman_resume.getAttribute("href");
         });
-
     }
 
     /**
@@ -279,15 +275,10 @@
         ValidateInput("email", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please enter a valid E-mail Address.")
     }
 
-    // function changeNavLogin()
-    // {
-    //     console.log('name injection');
-    //     let navBarTarget = document.body.getElementsByClassName("nav-item")[1];
-    //     let insertText  = document.createTextNode('<a class="nav-link" href="./products.html"><i class="fas fa-th"></i> Projects </a>');
-    //     navBarTarget.innerHTML = insertText.textContent;
-    //     console.log(navBarTarget);
-    // }
-
+    /**
+     * Adds the login user name to the nav
+     * @param {} fullName 
+     */
     function AddUserName(fullName)
     {
         $("li:nth-of-type(6)").after(`
@@ -297,7 +288,9 @@
         `);
     }
 
-
+    /**
+     * Called when viewing the login page
+     */
     function DisplayLoginPage()
     {
         console.log("Login Page");
@@ -328,7 +321,9 @@
         });        
     }
 
-
+    /**
+     * Form validation function for the register page.
+     */
     function RegisterFormValidation()
     {
         ValidateInput("firstName", /^([A-Z][a-z]{1,})$/, "User first name must begin with a capital, and may only be one name in length.");
@@ -338,7 +333,9 @@
         ValidateInput("emailAddress", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Please enter a valid E-mail Address.")
     };
 
-
+    /**
+     * Called when viewing the register page
+     */
     function DisplayRegisterPage()
     {
         console.log("Register Page");          
@@ -378,14 +375,13 @@
                 {
                     window.location.href = "login.html";              
                 }, 5000);
-            }
-
-
-
-            
+            }            
         });   
     }
 
+    /**
+     * Called when viewing the contact page
+     */
     function DisplayContactPage()
     {
         console.log("Contact Page");            
@@ -409,11 +405,8 @@
             {
                 window.location.href = "index.html";              
             }, 3000);
-
-        });        
-            
+        });            
     }
-
  
     // Start function called upon the website loading
     function Start() 
@@ -451,7 +444,6 @@
                 break;
         }        
     }
-
     
     function changeNav()
     {
@@ -481,6 +473,4 @@
 
     // Event listener for hooking into the Start function
     window.addEventListener("load", Start); 
-
-
 })(); 
