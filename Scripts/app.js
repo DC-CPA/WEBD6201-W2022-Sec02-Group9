@@ -300,6 +300,10 @@
 
          $("h1").replaceWith(`<h1 class="mb-3">Login Page<h1>`);
 
+         $("div.small").append(`Don't have an account? <a href="./register.html">Register here!</a>`);
+        
+
+
          // Listens for submit button to click
          login_submit.addEventListener("click", function(event)
          {
